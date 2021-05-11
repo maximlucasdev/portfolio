@@ -4,7 +4,7 @@ I ❤ 🥖.
 Some people might know me as shaguette.
 
 ## Github stats
-[![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=gruvbox)](https://shadowdev.ga)
+[![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark)](https://shadowdev.ga)
 
 <h2><img align="center" alt="QuackHost client area" width="80px" src="https://client.quackhost.uk/assets/img/logo.png"/> QuackHost's client area</h2><br/>
 QuackHost is a free hosting service for a lot of games & others. I made the client area part.
