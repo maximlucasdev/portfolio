@@ -11,7 +11,7 @@ Some people might know me as shaguette.
 
 ## How can you contact me:
 By email, at **hello@shadow-baguet.xyz**
-With Discord, on my discord server (discord.lol/quackhost)
+With Discord, on my discord server ([discord.link/pepsi](discord.link/pepsi))
 Via twitter, @x_shadow_gc
 
 Right now, **I do not offer services for client areas**. But this is gonna change soon, [right here](https://github.com/ShadowsDash).
