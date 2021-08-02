@@ -10,7 +10,7 @@ Some people might know me as shaguette.
 QuackHost is a free hosting service for a lot of games & others. I made the client area part.
 
 ## How can you contact me:
-By email, at **shadow@quackhost.uk**
+By email, at **shadow@shadow-baguet.xyz**
 With Discord, on the QuackHost discord (discord.lol/quackhost)
 Via twitter, @x_shadow_gc
 
