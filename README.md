@@ -1,4 +1,8 @@
-<p align="center"><img src="https://i.imgur.com/b1a39cz.png" width=40% /></p>
+<p float="left" align="center">
+  <img src="https://i.imgur.com/U9lFsUG.jpeg" width=15% />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/b1a39cz.png" width=40% />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/n0C9kvJ/o.png" width=15% height=10%/>
+</p>
 
 ### Hi! Welcome to my profile!
 I'm X_Shadow_, and I'm french<br/> 
