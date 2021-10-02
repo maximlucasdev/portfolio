@@ -11,7 +11,7 @@ I have a cat called pepsi which is really poggers: you can get a picture of him 
 Some people might know me as shaguette.
 
 ## Github stats
-[![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark)](https://shadowdev.ga)
+[![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark&show_icons=true)](https://shadowdev.ga)
 
 ## How can you contact me:
 By email, at **hello@shadow-baguet.xyz**
