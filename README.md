@@ -8,7 +8,8 @@
 I'm X_Shadow_, and I'm french<br/> 
 I ❤ 🥖.<br/> 
 I have a cat called pepsi which is really poggers: you can get a picture of him at [shadowcat.club](https://shadowcat.club)<br/> 
-Some people might know me as shaguette.
+Some people might know me as shaguette.<br/><br/>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I87ZFES)
 
 ## Github stats
 [![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark&show_icons=true)](https://shadowdev.ga)
