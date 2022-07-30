@@ -20,8 +20,8 @@ import {
 
 export const languages = [
   {name:"Python",mdi:mdiLanguagePython},
-  {name:"Javascript",mdi:mdiLanguageJavascript},
-  {name:"Typescript",mdi:mdiLanguageTypescript},
+  {name:"JavaScript",mdi:mdiLanguageJavascript},
+  {name:"TypeScript",mdi:mdiLanguageTypescript},
   {name:"HTML & CSS",mdi:mdiLanguageHtml5},
   {name:"VB.net 👴",mdi:mdiDotNet},
   {name:"PHP",mdi:mdiLanguagePhp}
