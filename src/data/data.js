@@ -1,4 +1,52 @@
-export const skills = ["React", "React Native (Expo)", "PHP", "Python", "Node.js"]
+import {
+   mdiLanguagePython,
+   mdiLanguageJavascript,
+   mdiLanguageTypescript,
+   mdiLanguageHtml5,
+   mdiDotNet,
+   mdiLanguagePhp,
+   mdiApi, 
+   mdiReact, 
+   mdiCellphone,
+   mdiNodejs,
+   mdiElectronFramework, 
+   mdiRobot,
+   mdiDatabase,
+   mdiMicrosoftVisualStudio,
+   mdiMicrosoftVisualStudioCode,
+   mdiGithub,
+   mdiDocker
+} from '@mdi/js';
+
+export const languages = [
+  {name:"Python",mdi:mdiLanguagePython},
+  {name:"Javascript",mdi:mdiLanguageJavascript},
+  {name:"Typescript",mdi:mdiLanguageTypescript},
+  {name:"HTML & CSS",mdi:mdiLanguageHtml5},
+  {name:"VB.net 👴",mdi:mdiDotNet},
+  {name:"PHP",mdi:mdiLanguagePhp}
+]
+
+export const frameworks = [
+  {name:"React",mdi:mdiReact},
+  {name:"React Native Expo",mdi:mdiCellphone},
+  {name:"Node.js",mdi:mdiNodejs},
+  {name:"Electron",mdi:mdiElectronFramework},
+  {name:"Hapi",mdi:mdiApi},
+  {name:"discord.js",mdi:mdiRobot}
+]
+
+export const db = [
+  {name:"MySQL", mdi:mdiDatabase},
+  {name:"Redis", mdi:mdiDatabase}
+]
+
+export const tools = [
+  {name:"Visual Studio 2022", mdi:mdiMicrosoftVisualStudio},
+  {name:"Visual Studio Code", mdi:mdiMicrosoftVisualStudioCode},
+  {name:"GitHub", mdi:mdiGithub},
+  {name:"Docker", mdi:mdiDocker}
+]
 
 export const projects = [
     {
@@ -11,7 +59,7 @@ export const projects = [
     },
     {
       title: "OptikServers.com",
-      subtitle: "Founder, assiting in the development of the dashboard (PHP), made the Discord bot (Python), made the Android App.",
+      subtitle: "Founder, assiting in the development of the dashboard (PHP), made the Discord bot (Discord.js), made the Android App.",
       description:
         "I'm one of the founders of OptikServers.com, a service that provides free 24/7 hosting services for Minecraft servers, Discord bots and more. I was in charge of the development of the Discord bot, and participated in the developement of the client area.",
       image: "https://i.imgur.com/aDDNaPN.png",

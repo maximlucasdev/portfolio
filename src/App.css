@@ -1,3 +1,9 @@
 .bg-gradient {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
+.wavy-underline {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 0.2em;
+  text-decoration-color: #FFC200; 
+}

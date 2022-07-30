@@ -6,7 +6,7 @@ export default function Portfolio() {
     <section id="projects">
         <div className="container px-5 py-10 mx-auto">
             <div className='flex justify-center text-center'>
-                <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-white'>Portfolio</h1>
+                <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-white wavy-underline'>Portfolio</h1>
             </div>
             <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 justify-center">
               {projects.map((project) => (
