@@ -15,6 +15,6 @@ Some people might know me as shaguette.<br/><br/>
 [![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark&show_icons=true)](https://shadowdev.ga)
 
 ## How can you contact me:
-By email, at **contact@xshadow.me**
+By email, at **contact@xshadow.xyz**
 With Discord, on my discord server ([discord.gg/Rp4ea8mX3k](https://discord.gg/Rp4ea8mX3k))
 Via twitter, @x_shadow_gc
