@@ -51,15 +51,15 @@ export const tools = [
 export const projects = [
     {
       title: "Wolfer",
-      subtitle: "React Native (expo) game. - React frontend, Node.js API & websocket backend. - FullStack",
+      subtitle: "React Native (expo) game. - React frontend, Node.js Hapi API & websocket backend. - FullStack",
       description:
         "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android. The game is developed using React Native, Expo, Node.js, Express, Websockets, Redis, MySQL & PHP.",
       image: "https://i.imgur.com/ZBZyKYQ.png",
-      link: "https://wolfer.tech",
+      link: "https://wolfer.fun",
     },
     {
       title: "OptikServers.com",
-      subtitle: "Discord bot, Android app, and client panel (PHP)",
+      subtitle: "Discord bot (Node.js), Android app (React Native Expo), and client panel (PHP)",
       description:
         "I'm one of the founders of OptikServers.com, a service that provides free 24/7 hosting services for Minecraft servers, Discord bots and more. I was in charge of the development of the Discord bot, and participated in the developement of the client area.",
       image: "https://i.imgur.com/aDDNaPN.png",
@@ -83,10 +83,10 @@ export const projects = [
     },
     {
         title: "PepsiTube",
-        subtitle: "FullStack",
+        subtitle: "FullStack (Node.js Hapi React MUI)",
         description:
             "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
-        image: "https://i.imgur.com/i2pWoLq.png",
+        image: "https://i.imgur.com/OQQc7Kg.png",
         link: "https://tube.pepsi.host",
     },
   ];
