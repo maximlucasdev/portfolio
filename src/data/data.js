@@ -58,6 +58,14 @@ export const projects = [
       link: "https://wolfer.fun",
     },
     {
+      title: "PepsiTube",
+      subtitle: "FullStack (Node.js Hapi React MUI)",
+      description:
+          "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
+      image: "https://i.imgur.com/OQQc7Kg.png",
+      link: "https://tube.pepsi.host",
+    },
+    {
       title: "OptikServers.com",
       subtitle: "Discord bot (Node.js), Android app (React Native Expo), and client panel (PHP)",
       description:
@@ -80,13 +88,5 @@ export const projects = [
             "A fully customizable shared-resources based dashboard for pterodactyl hosting services. It is easily customizable, and is meant to be used with Pterodactyl. It allows your users to manage, create and delete their servers. Using a queue system, you can create a queue for servers created by your users, and manage the slots assigned to each node. It comes with a full economy system, with a shop for users to buy resources.",
         image: "https://i.imgur.com/VezCVyn.png",
         link: "https://github.com/ShadowsDash/ShadowsDash",
-    },
-    {
-        title: "PepsiTube",
-        subtitle: "FullStack (Node.js Hapi React MUI)",
-        description:
-            "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
-        image: "https://i.imgur.com/OQQc7Kg.png",
-        link: "https://tube.pepsi.host",
     },
   ];
