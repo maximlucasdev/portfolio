@@ -8,7 +8,7 @@ export default function Contact() {
             </div>
             <div className="w-full justify-center text-center">
               <p>Do you want to contact me to ask a question? Or maybe to <b>hire me?</b></p><br/>
-              <h5 className='text-white font-medium text-3xl'><a href="mailto:contact@xshadow.me">contact@xshadow.me</a></h5>
+              <h5 className='text-white font-medium text-3xl'><a href="mailto:contact@xshadow.me">contact@xshadow.xyz</a></h5>
             </div>
         </div>
     </section>
