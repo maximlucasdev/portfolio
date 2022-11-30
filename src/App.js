@@ -1,22 +1,23 @@
 import './App.css';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Portfolio from './components/Portfolio';
-import Presentation from './components/Presentation';
-import Skills from './components/Skills';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './pages/Home';
 
 function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
-      <Navbar />
-      <Presentation/>
-      <Skills/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </main>
+    <div>
+      <Router>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+        </Routes>
+      </Router>
+    </div>
   );
+  
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { db, frameworks, languages, tools } from '../data/data'
+import { db, frameworks, languages, tools } from '../../data/data'
 import Display from './Skills/Display'
 
 export default function Skills() {

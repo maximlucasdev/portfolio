@@ -1,5 +1,5 @@
 import React from 'react'
-import { projects } from "../data/data";
+import { projects } from "../../data/data";
 
 export default function Portfolio() {
   return (
