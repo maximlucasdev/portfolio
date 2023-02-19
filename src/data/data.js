@@ -16,7 +16,8 @@ import {
    mdiMicrosoftVisualStudioCode,
    mdiGithub,
    mdiDocker,
-   mdiTailwind
+   mdiTailwind,
+   mdiWeb
 } from '@mdi/js';
 
 export const languages = [
@@ -30,17 +31,20 @@ export const languages = [
 
 export const frameworks = [
   {name:"React",mdi:mdiReact},
+  {name:"Svelte",mdi:mdiWeb},
   {name:"React Native Expo",mdi:mdiCellphone},
   {name:"Node.js",mdi:mdiNodejs},
   {name:"Electron",mdi:mdiElectronFramework},
   {name:"Hapi",mdi:mdiApi},
   {name:"discord.js",mdi:mdiRobot},
-  {name:"Tailwind",mdi:mdiTailwind}
+  {name:"Tailwind CSS",mdi:mdiTailwind},
 ]
 
 export const db = [
   {name:"MySQL", mdi:mdiDatabase},
-  {name:"Redis", mdi:mdiDatabase}
+  {name:"Redis", mdi:mdiDatabase},
+  {name:"MongoDB", mdi:mdiDatabase},
+  {name:"PocketBase", mdi:mdiDatabase},
 ]
 
 export const tools = [
@@ -52,20 +56,28 @@ export const tools = [
 
 export const projects = [
     {
-      title: "Wolfer",
-      subtitle: "React Native (expo) game. - React frontend, Node.js Hapi API & websocket backend. - FullStack",
-      description:
-        "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android. The game is developed using React Native, Expo, Node.js, Express, Websockets, Redis, MySQL & PHP.",
-      image: "https://i.imgur.com/HUjuyvo.png",
-      link: "https://wolfer.fun",
-    },
-    {
       title: "PepsiTube",
       subtitle: "FullStack (Node.js Hapi React MUI)",
       description:
           "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
       image: "https://i.imgur.com/OQQc7Kg.png",
       link: "https://tube.pepsi.host",
+    },
+    {
+      title: "HostApp",
+      subtitle: "Available for order - Contact me ! | FullStack (Node.js Hapi, Svelte, React Native Expo, PocketBase)",
+      description:
+          "HostApp allows your hosting company to have their own Android app with an easy to use admin panel. The app is fully customizable. It's a great way to increase your sales and to keep your customers informed about your services. The app is available for order, contact me if you're interested !",
+      image: "https://usercontent.catto.pictures/x_shadow_/80d498da-f58c-45d0-82a1-981a6fbaa600.png",
+      link: "https://hostappdemo.fr6.xshadow.xyz/",
+    },
+    {
+      title: "Wolfer",
+      subtitle: "React Native (expo) game. - React frontend, Node.js Hapi API & websocket backend. - FullStack",
+      description:
+        "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android. The game is developed using React Native, Expo, Node.js, Express, Websockets, Redis, MySQL & PHP.",
+      image: "https://i.imgur.com/HUjuyvo.png",
+      link: "https://wolfer.fun",
     },
     {
       title: "OptikServers.com",
