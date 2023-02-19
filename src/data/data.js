@@ -61,7 +61,7 @@ export const projects = [
       description:
           "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
       image: "https://i.imgur.com/OQQc7Kg.png",
-      link: "https://tube.pepsi.host",
+      link: "https://tube.pepsi.pics",
     },
     {
       title: "HostApp",
