@@ -7,7 +7,7 @@ export default function Skills() {
     <section id="skills">
         <div className="container px-5 py-10 mx-auto">
             <div className='flex justify-center text-center mb-5'>
-                <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-white wavy-underline'>My skills</h1>
+                <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-white wavy-underline'>Skills</h1>
             </div>
             <Display toDisp={languages} name="Languages" />
             <Display toDisp={frameworks} name="Frameworks / Libraries" />

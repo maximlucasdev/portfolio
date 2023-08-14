@@ -26,6 +26,7 @@ export const languages = [
   {name:"TypeScript",mdi:mdiLanguageTypescript},
   {name:"HTML & CSS",mdi:mdiLanguageHtml5},
   {name:"VB.net 👴",mdi:mdiDotNet},
+  {name:"C#",mdi:mdiDotNet},
   {name:"PHP",mdi:mdiLanguagePhp}
 ]
 
@@ -56,15 +57,15 @@ export const tools = [
 
 export const projects = [
     {
-      title: "PepsiTube",
-      subtitle: "FullStack (Node.js Hapi React MUI)",
-      description:
-          "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
-      image: "https://i.imgur.com/OQQc7Kg.png",
-      link: "https://tube.pepsi.pics",
+        title: "Shadow's Dash (2023)",
+        subtitle: "Client panel (Svelte + Hapi)",
+        description:
+            "A fully featured client panel for Pterodactyl-based hosting services. Comes with two integrated modes: Resource split and Per Server Plans. Comes with a fully integrated payment system, invoicing system, referral system, and more. You can view a live demo of the client panel by clicking on the link below. The client panel is available for purchase, contact me if you're interested !",
+        image: "https://iili.io/HDN4Rqv.md.png",
+        link: "https://my.optikservers.com",
     },
     {
-      title: "HostApp",
+      title: "HostApp (2023)",
       subtitle: "Available for order - Contact me ! | FullStack (Node.js Hapi, Svelte, React Native Expo, PocketBase)",
       description:
           "HostApp allows your hosting company to have their own Android app with an easy to use admin panel. The app is fully customizable. It's a great way to increase your sales and to keep your customers informed about your services. The app is available for order, contact me if you're interested !",
@@ -72,7 +73,15 @@ export const projects = [
       link: "https://hostappdemo.fr6.xshadow.xyz/",
     },
     {
-      title: "Wolfer",
+      title: "PepsiTube (2022)",
+      subtitle: "FullStack (Node.js Hapi React MUI)",
+      description:
+          "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
+      image: "https://i.imgur.com/OQQc7Kg.png",
+      link: "https://tube.pepsi.pics",
+    },
+    {
+      title: "Wolfer (2022)",
       subtitle: "React Native (expo) game. - React frontend, Node.js Hapi API & websocket backend. - FullStack",
       description:
         "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android. The game is developed using React Native, Expo, Node.js, Express, Websockets, Redis, MySQL & PHP.",
@@ -80,7 +89,7 @@ export const projects = [
       link: "https://wolfer.fun",
     },
     {
-      title: "OptikServers.com",
+      title: "OptikServers.com (2021)",
       subtitle: "Discord bot (Node.js), Android app (React Native Expo), client panel (2021, PHP), advent calendar (December 2022, React & MUI)",
       description:
         "I'm one of the founders of OptikServers.com, a service that provides free 24/7 hosting services for Minecraft servers, Discord bots and more. I was in charge of the development of the Discord bot, and participated in the developement of the client area.",
@@ -88,19 +97,11 @@ export const projects = [
       link: "https://optikservers.com",
     },
     {
-      title: "QuackHost.uk (2020-2021)",
+      title: "QuackHost.uk (2020)",
       subtitle: "Client panel (PHP)",
       description:
         "A complete home-made client panel using PHP and MySQL. Using a dashboard template from Creative Tim, the ui & ux is easily understandable and easy to use. Coin AFK earning, server management & creation, economy system with a shop, and a lot more.",
       image: "https://i.imgur.com/U1X5mYQ.png",
       link: false,
-    },
-    {
-        title: "Shadow's Dash - Deprecated",
-        subtitle: "Client panel (PHP)",
-        description:
-            "A fully customizable shared-resources based dashboard for pterodactyl hosting services. It is easily customizable, and is meant to be used with Pterodactyl. It allows your users to manage, create and delete their servers. Using a queue system, you can create a queue for servers created by your users, and manage the slots assigned to each node. It comes with a full economy system, with a shop for users to buy resources.",
-        image: "https://i.imgur.com/VezCVyn.png",
-        link: "https://github.com/ShadowsDash/ShadowsDash",
     },
   ];

@@ -1,6 +1,13 @@
 .bg-gradient {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .wavy-underline {
   text-decoration: underline;
   text-decoration-style: wavy;
