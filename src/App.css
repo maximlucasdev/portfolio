@@ -8,6 +8,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .wavy-underline {
   text-decoration: underline;
   text-decoration-style: wavy;
