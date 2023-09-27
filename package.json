@@ -1,46 +1,42 @@
 {
-  "name": "shadowdevfr",
-  "version": "0.1.0",
+  "name": "xyz.xshadow.portfolio",
   "private": true,
-  "dependencies": {
-    "@mdi/js": "^7.0.96",
-    "@mdi/react": "^1.6.1",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.0.1",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.4.3",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@floating-ui/react": "^0.25.2",
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
+    "@preact/signals": "^1.2.1",
+    "preact": "^10.16.0",
+    "react-animated-css": "^1.2.1",
+    "react-rnd": "^10.4.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
-  }
+    "@preact/preset-vite": "^2.5.0",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "description": "<p float=\"left\" align=\"center\">\r   <img src=\"https://i.imgur.com/U9lFsUG.jpeg\" width=15% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.imgur.com/b1a39cz.png\" width=40% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.ibb.co/n0C9kvJ/o.png\" width=15% height=10%/>\r </p>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowdevfr/shadowdevfr.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Maxim Lucas",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/shadowdevfr/shadowdevfr/issues"
+  },
+  "homepage": "https://github.com/shadowdevfr/shadowdevfr#readme"
 }

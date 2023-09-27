@@ -1,0 +1,55 @@
+{
+    "copyright": "Tous droits réservés",
+    
+    "boot.1": "Démarrage...",
+    "boot.2": "Chargement du fond d'écran...",
+
+    "welcome.title": "Bienvenue sur mon portfolio!",
+    "welcome.desc1": "Naviguez comme si vous utilisiez un système d'éxploitation classique.",
+    "welcome.desc2": "Faites clique droit, ouvrez le menu démarrer, cliquez sur les icones du bureau... Faites ce que vous voulez!",
+    "welcome.btn": "J'ai compris",
+
+    "app.aboutme": "A propos",
+    "app.projects": "Projets",
+    "app.skills": "Compétences",
+    "app.terminal": "Terminal",
+
+    "app.skills.title": "Compétences en programmation",
+    "app.github.title": "Profil Github",
+    "app.os.customize.title": "Changer le fond d'écran",
+    "app.os.about.title": "A propos",
+
+    "app.aboutme.content.title": "Je suis Maxim.",
+    "app.aboutme.content.subtitle": "Un jeune développeur français passioné.",
+    "app.aboutme.content.desc": "J'ai 17 ans et je suis actuellement au lycée. Je suis passionné par la programmation et je recherche des petits boulots dans ce domaine. J'ai beaucoup d'expérience en programmation et je cherche toujours à en apprendre davantage et à découvrir les nouvelles technologies ! Je pense que pour être un bon développeur, il faut toujours se renseigner sur de nouveaux langages, pratiques et règles de programmation. Je suis une personne très motivée et je cherche toujours à m'améliorer.",
+    "app.aboutme.content.btn": "Mon CV",
+    
+    "app.aboutwebsite.content.useadvice": "Utilisez ce portfolio comme un système d'exploitation classique.",
+    "app.aboutwebsite.content.p1": "Ce site utilise le framework",
+    "app.aboutwebsite.content.p2": "et",
+    "app.aboutwebsite.content.p3": "J'ai utilisé",
+    "app.aboutwebsite.content.p4": "pour le style.",
+    "app.aboutwebsite.content.p5": "Les icônes viennent de",
+    "app.aboutwebsite.content.p6": "Hébergé avec",
+
+    "app.github.content.title": "Vous voulez voir un peu de code?",
+
+    "app.myprojects.content.title": "Projets",
+    "app.myprojects.content.subtitle": "Ici, vous pouvez trouvez les projets sur lesquels j'ai travaillé.",
+    "app.myprojects.content.learnmore": "En savoir plus",
+    "app.myprojects.content.goback": "Retour",
+    "app.myprojects.content.open": "Ouvrir",
+
+    "app.skills.content.title": "Compétences en programmation",
+    "app.skills.content.languages": "Langages",
+    "app.skills.content.databases": "Bases de données",
+    "app.skills.content.frameworks": "Frameworks / Bibliothèques",
+    "app.skills.content.tools": "Outils",
+
+    "contextmenu.customize": "Customiser",
+    "contextmenu.about": "A propos",
+
+    "taskbar.settings.left": "restants",
+    "taskbar.settings.connected": "Connecté"
+
+}
