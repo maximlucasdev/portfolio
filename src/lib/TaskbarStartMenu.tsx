@@ -1,7 +1,7 @@
 import { Animated } from "react-animated-css";
 import apps from "../apps/Apps";
 import { Icon } from '@mdi/react';
-import { mdiBroom, mdiGithub, mdiRestart } from "@mdi/js";
+import { mdiGithub, mdiRestart } from "@mdi/js";
 import { pepsimode } from "../Signals";
 import { openApp } from "./AppsWindowsManager";
 
