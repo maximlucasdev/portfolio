@@ -2,7 +2,7 @@ import { Suspense, lazy } from "preact/compat";
 import Apps from './apps/Apps';
 import { useFloating } from "@floating-ui/react";
 import { useState, useEffect } from "preact/hooks";
-import { activeWindow, isAppFullscreen, pepsimode, wallpaper } from "./Signals"
+import { isAppFullscreen, pepsimode, wallpaper } from "./Signals"
 const DesktopContextMenu = lazy(() => import("./lib/DesktopContextMenu"));
 const AppsWindowsManager = lazy(() => import("./lib/AppsWindowsManager"));
 const Taskbar =  lazy(() => import("./lib/Taskbar"));
