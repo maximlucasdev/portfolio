@@ -1,6 +1,6 @@
 import { signal } from "@preact/signals";
 
-const navlen = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+const navlen = navigator.languages ? navigator.languages[0] : navigator.language;
 
 const openedWindows = signal([]);
 const activeWindow = signal(-1);
