@@ -44,7 +44,7 @@ export default function Desktop() {
           setShowContextMenu(false);
         }}>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
-            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen'>
+            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen content-start'>
                 {Apps.map((app) => {
                   if (app.name === "Pepsi" && !pepsimode.value) return null;
                   if (app.hide) return null;
