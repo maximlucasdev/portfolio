@@ -2,7 +2,7 @@ import { Suspense, lazy } from "preact/compat";
 import Apps from './apps/Apps';
 import { useFloating } from "@floating-ui/react";
 import { useState, useEffect } from "preact/hooks";
-import { isAppFullscreen, pepsimode, wallpaper } from "./Signals"
+import { activeWindow, isAppFullscreen, pepsimode, wallpaper } from "./Signals"
 const DesktopContextMenu = lazy(() => import("./lib/DesktopContextMenu"));
 const AppsWindowsManager = lazy(() => import("./lib/AppsWindowsManager"));
 const Taskbar =  lazy(() => import("./lib/Taskbar"));
@@ -44,7 +44,7 @@ export default function Desktop() {
           setShowContextMenu(false);
         }}>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
-            <div class='flex flex-col h-full flex-wrap content-start gap-2 p-2 md:p-5 w-screen'>
+            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen'>
                 {Apps.map((app) => {
                   if (app.name === "Pepsi" && !pepsimode.value) return null;
                   if (app.hide) return null;
