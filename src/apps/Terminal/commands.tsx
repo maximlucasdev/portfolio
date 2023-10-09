@@ -79,6 +79,12 @@ export const commands = [
         }
     },
     {
+        name: 'ls',
+        Response: (props:{scroll:() => {}}) => {
+            return <p>Projects Skills AboutMe.md</p>
+        }
+    },
+    {
         name: 'baguette',
         Response: (props:{scroll:() => {}}) => {
             return <img src="https://pngimg.com/uploads/baguette/baguette_PNG15.png" alt="baguette" onLoad={() => props.scroll()}/>
