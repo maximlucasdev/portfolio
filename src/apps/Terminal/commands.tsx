@@ -80,8 +80,8 @@ export const commands = [
     },
     {
         name: 'ls',
-        Response: (props:{scroll:() => {}}) => {
-            return <p>Projects Skills AboutMe.md</p>
+        Response: () => {
+            return <p><span className="gradient-text font-bold">apps pepsi-pics sideprojects</span> Portfolio.tsx</p>
         }
     },
     {
