@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "preact/compat";
 import t from "../i18n/i18n";
+import LoadingApp from "./LoadingApp";
 const Vscode = lazy(() => import("./vscode/Vscode"));
 const MyProjects = lazy(() => import("./MyProjects/MyProjects"));
 const AboutWebsite = lazy(() => import("./AboutWebsite/About"));
@@ -24,7 +25,7 @@ const apps: App[] = [
             title: t('app.aboutme')
         },
         icon: '/apps/welcome.png',
-        component: () => <Suspense fallback={<></>}><AboutMe/></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><AboutMe/></Suspense>
     },
     {
         name: t('app.projects'),
@@ -38,7 +39,7 @@ const apps: App[] = [
             title: t('app.projects')
         },
         icon: '/apps/portfolio.png',
-        component: () => <Suspense fallback={<></>}><MyProjects/></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><MyProjects/></Suspense>
     },
     {
         name: t('app.skills'),
@@ -52,7 +53,7 @@ const apps: App[] = [
             title: t('app.skills.title')
         },
         icon: '/apps/skills.png',
-        component: () => <Suspense fallback={<></>}><SkillsMain /></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><SkillsMain /></Suspense>
     },
     {
         name: t('app.terminal'),
@@ -66,7 +67,7 @@ const apps: App[] = [
             title: t('app.terminal')
         },
         icon: '/apps/terminal.png',
-        component: () => <Suspense fallback={<></>}><Terminal /></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><Terminal /></Suspense>
     },
     {
         name: 'Github',
@@ -80,7 +81,7 @@ const apps: App[] = [
             title: t('app.github.title')
         },
         icon: '/apps/github.png',
-        component: () => <Suspense fallback={<></>}><GithubWindow /></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><GithubWindow /></Suspense>
     },
     {
         name: 'Pepsi',
@@ -94,7 +95,7 @@ const apps: App[] = [
             title: 'Pepsi - Gallery'
         },
         icon: '/apps/pepsifolder.png',
-        component: () => <Suspense fallback={<></>}><Pepsi/></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><Pepsi/></Suspense>
     },
     {
         name: 'Visual Studio Code',
@@ -108,7 +109,7 @@ const apps: App[] = [
             title: 'Visual Studio Code'
         },
         icon: '/apps/vscode.svg',
-        component: () => <Suspense fallback={<></>}><Vscode/></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><Vscode/></Suspense>
     },
 
 
@@ -126,13 +127,13 @@ const apps: App[] = [
         },
         hide: true,
         icon: '/context/customize.png',
-        component: () => <Suspense fallback={<></>}><Customize /></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><Customize /></Suspense>
     },
     {
         name: 'os_about',
         window: {
             width: 200,
-            height: 500,
+            height: 600,
             resizable: false,
             maximizable: false,
             minimizable: false,
@@ -142,7 +143,7 @@ const apps: App[] = [
         },
         hide: true,
         icon: '/context/about.png',
-        component: () => <Suspense fallback={<></>}><AboutWebsite /></Suspense>
+        component: () => <Suspense fallback={<LoadingApp/>}><AboutWebsite /></Suspense>
     }
 ]
 

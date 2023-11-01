@@ -78,7 +78,7 @@ const projects = [
       description:
           "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
       image: "https://i.imgur.com/OQQc7Kg.png",
-      link: "https://tube.pepsi.pics",
+      link: "https://tube.xshadow.xyz",
     },
     {
       title: "Wolfer (2022)",
@@ -86,7 +86,7 @@ const projects = [
       description:
         "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android. The game is developed using React Native, Expo, Node.js, Express, Websockets, Redis, MySQL & PHP.",
       image: "https://i.imgur.com/HUjuyvo.png",
-      link: "https://wolfer.fun",
+      link: false,
     },
     {
       title: "OptikServers.com (2021)",
