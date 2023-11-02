@@ -23,7 +23,7 @@ export default function MyProjects() {
                       return <div key={projects.indexOf(project)}>
                           {/* @ts-ignore */}
                           <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={1000} animationOutDuration={300} animationInDelay={projects.indexOf(project)*150} animationOutDelay={projects.indexOf(project)*100}>
-                              <ProjectCard project={project} setViewProject={setViewProject}/>
+                              <ProjectCard project={project as Project} setViewProject={setViewProject}/>
                           </Animated>
                       </div>
                   })}
