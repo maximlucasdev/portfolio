@@ -10,12 +10,13 @@ export const commands = [
         Response: (props:{scroll:() => {}}) => {
             useEffect(() => {props.scroll()}, []);
             return <h1>
-                <p className='gradient-text'>========= List of commands =========</p>
+                <p className='gradient-text w-max'>========= List of commands =========</p>
                 <p>• help <span className='text-gray-400'>- Get a list of commands</span></p>
                 <p>• pepsi <span className='text-gray-400'>- Get a random pepsi image</span></p>
                 <p>• neofetch <span className='text-gray-400'>- Get my main PC specs</span></p>
                 <p>• baguette <span className='text-gray-400'>- baget</span></p>
                 <p>• thisyou <span className='text-gray-400'>- Remind you of something?</span></p>
+                <p>• clear <span className='text-gray-400'>- Clear command history</span></p>
             </h1>
         }
     },
@@ -88,6 +89,22 @@ export const commands = [
         name: 'baguette',
         Response: (props:{scroll:() => {}}) => {
             return <img src="https://pngimg.com/uploads/baguette/baguette_PNG15.png" alt="baguette" onLoad={() => props.scroll()}/>
+        }
+    },
+    {
+        name: 'clear',
+        Response: (props:{clear:() => {}}) => {
+            useEffect(() => {props.clear()}, []);
+            return <></>
+        }
+    },
+    {
+        name: 'version',
+        Response: () => {
+            useEffect(() => {
+                openApp(apps.find((x) => x.name === 'os_about')!);
+            }, []);
+            return <></>
         }
     },
     {

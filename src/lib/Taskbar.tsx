@@ -59,7 +59,7 @@ export default function Taskbar() {
                         <button class='block md:hidden mr-3 transition scale-110 hover:scale-125' aria-label="About website" onClick={() => {openApp(aboutApp);}}>
                             <Icon path={mdiInformation} size={0.9} className='text-white'/>
                         </button>
-                        <button ref={languageFloat.refs.setReference} class='mr-3 transition scale-110' aria-label="Change language" onClick={() => {
+                        <button ref={languageFloat.refs.setReference} class='flex flex-col gap-1 items-center hover:bg-white/5 p-2 md:p-3 rounded-md border-t-[1px] border-transparent hover:border-white/5 transition' aria-label="Change language" onClick={() => {
                             activeWindow.value = activeWindow.value === -5 ? -1 : -5;
                         }}>
                             <Icon path={mdiTranslate} size={0.9} className='text-white'/>

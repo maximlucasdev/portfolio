@@ -21,8 +21,8 @@ export default function AboutWebsite() {
         <div class='h-full'/>
         <p class='text-sm text-center w-full text-gray-500'>Copyright © {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' target='_blank'>Maxim Lucas</a> {t('copyright')}</p>
         <div class='flex flex-row items-center justify-center w-full text-white mt-2 mb-1 p-4 gap-3 '>
-          <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> Source code</a>
-          <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}><Icon path={mdiRestart} size={1}/> Reset</button>
+          <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> {t('actionbuttons.srccode')}</a>
+          <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}><Icon path={mdiRestart} size={1}/> {t('actionbuttons.reset')}</button>
         </div>
       </div>
     </div>

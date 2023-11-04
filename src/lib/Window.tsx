@@ -38,9 +38,9 @@ export default function Window(props:{app:App,toggleFullScreen: () => void}) {
             onDrag={() => {activeWindow.value = Apps.indexOf(props.app)}}
             onResize={() => {activeWindow.value = Apps.indexOf(props.app)}}
           >
-              <div class='flex flex-col  rounded-xl shadow-xl w-full h-full'>
+              <div class='flex flex-col shadow-xl w-full h-full relative'>
                 {props.app.window.showTitle !== false ?
-                  <div className={`flex flex-row justify-between p-2 border-b-[1px] rounded-t-md border-white/10 handle ${props.app.window.transparentTitleBar ? 'absolute top-0 w-full' : 'bg-zinc-800'}`}>
+                  <div className={`flex h-11 flex-row justify-between z-50 p-2 border-b-[1px] w-full absolute rounded-t-md border-white/10 handle ${props.app.window.transparentTitleBar ? 'absolute top-0 w-full' : 'bg-zinc-800'}`}>
                       <div class='flex gap-2 items-center'>
                         <img src={props.app.icon} class='w-5 h-5'/>
                         <p className='text-white'>{props.app.window.title}</p>
@@ -52,7 +52,7 @@ export default function Window(props:{app:App,toggleFullScreen: () => void}) {
                       </div>
                   </div>
                 : null}
-                <div class='w-full h-full rounded-md'>
+                <div class={`w-full h-full rounded-md ${props.app.window.transparentTitleBar ? 'pt-0' : 'pt-11'}`}>
                   <Content/>
                 </div>
               </div>

@@ -52,6 +52,8 @@
     "contextmenu.about": "A propos",
 
     "taskbar.settings.left": "restants",
-    "taskbar.settings.connected": "Connecté"
+    "taskbar.settings.connected": "Connecté",
 
+    "actionbuttons.srccode": "Code source",
+    "actionbuttons.reset": "Réinitialiser"
 }

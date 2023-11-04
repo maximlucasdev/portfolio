@@ -16,15 +16,17 @@ export default function Terminal() {
       <div className="bg-zinc-800 w-full h-full md:h-96 rounded-b-md">
           <div className='flex flex-col justify-end'>
             <div className='font-mono w-full h-full md:h-96 p-3 text-white overflow-y-scroll noscrollbar' style={{height: window.innerWidth < 768 ? window.innerHeight-100 : 385}} id={termId}>
-              <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PepsiOS 1.0.0 (x64)</span><br/><br/>
+              <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PortfoliOS 1.0.0 (x64)</span><br/><br/>
                 * Website:  https://xshadow.xyz<br/>
-                * Support:  hello@xshadow.xyz</p>
+                * Support:  hello@xshadow.xyz
+                </p>
               <p className='text-gray-500 text-xs'>(i) Type "help" to start! To type commands, click on "help" below. It's the input box!</p>
               {history.map((value) => {
                 const Component = value;
-                // @ts-ignore
-                return <Component scroll={() => {
-                  document.getElementById(termId).scrollTop = document.getElementById(termId).scrollHeight;
+                return <Component clear={() => {
+                  setHistory([]);
+                }} scroll={() => {
+                  setTimeout(() => document.getElementById(termId).scrollTop = document.getElementById(termId).scrollHeight, 50);
                 }}/>
               })}
               <p>
@@ -42,6 +44,7 @@ export default function Terminal() {
                         setHistory([...history, comp, command.Response]);
                         setInputData('');
                       }
+                      setTimeout(() => document.getElementById(termId).scrollTop = document.getElementById(termId).scrollHeight, 100);
                     }
                 }}></input>
                 <span className='text-gray-400 mr-1'>{completion}</span>

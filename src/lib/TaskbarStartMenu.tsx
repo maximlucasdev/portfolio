@@ -4,6 +4,7 @@ import { Icon } from '@mdi/react';
 import { mdiGithub, mdiRestart } from "@mdi/js";
 import { pepsimode } from "../Signals";
 import { openApp } from "./AppsWindowsManager";
+import t from "../i18n/i18n";
 
 export default function TaskbarStartMenu() {
   const dmyl = new Date().toLocaleDateString(undefined, {day: 'numeric', month: 'long', year: 'numeric'});
@@ -24,8 +25,8 @@ export default function TaskbarStartMenu() {
           )
         })}
         <div class='flex flex-row items-center justify-end w-full text-white mt-2 mb-1 border-t-[1px] border-white/10 p-4 gap-3 transition'>
-          <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> Source code</a>
-          <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}><Icon path={mdiRestart} size={1}/> Reset</button>
+          <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> {t('actionbuttons.srccode')}</a>
+          <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}><Icon path={mdiRestart} size={1}/> {t('actionbuttons.reset')}</button>
         </div>
       </div>
     </Animated>

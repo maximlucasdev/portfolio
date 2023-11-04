@@ -117,11 +117,11 @@ const apps: App[] = [
     {
         name: 'os_customize',
         window: {
-            width: 900,
-            height: 600,
-            resizable: false,
-            maximizable: false,
-            minimizable: false,
+            width: 1000,
+            height: 700,
+            resizable: true,
+            maximizable: true,
+            minimizable: true,
             fullscreenable: true,
             title: t('app.os.customize.title')
         },

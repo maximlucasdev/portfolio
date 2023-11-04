@@ -31,3 +31,10 @@ interface Project {
     image: string,
     link?: string,
 }
+
+interface NotificationContent {
+    title: string,
+    description: string,
+    icon: string,
+    date: Date
+}
