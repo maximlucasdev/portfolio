@@ -12,5 +12,6 @@ const notifications = signal<NotificationContent[]>([{
     icon: "https://maximlucas.dev/logo.png",
     date: new Date()
 }]);
+const noOs = signal(false);
 
-export {openedWindows, activeWindow, wallpaper, pepsimode, isAppFullscreen, language, notifications}
+export {openedWindows, activeWindow, wallpaper, pepsimode, isAppFullscreen, language, notifications, noOs}

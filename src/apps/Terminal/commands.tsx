@@ -1,7 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 import { openApp } from "../../lib/AppsWindowsManager";
 import apps from "../Apps";
-import { pepsimode } from "../../Signals";
+import { noOs, pepsimode } from "../../Signals";
 
 
 export const commands = [
@@ -83,6 +83,15 @@ export const commands = [
         name: 'ls',
         Response: () => {
             return <p><span className="gradient-text font-bold">apps pepsi-pics sideprojects</span> Portfolio.tsx</p>
+        }
+    },
+    {
+        name: 'rm -rf /',
+        Response: () => {
+            useEffect(() => {
+                setTimeout(() => {noOs.value = true}, 500);
+            }, []);
+            return <></>
         }
     },
     {

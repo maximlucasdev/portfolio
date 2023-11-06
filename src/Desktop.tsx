@@ -2,18 +2,21 @@ import { Suspense, lazy } from "preact/compat";
 import Apps from './apps/Apps';
 import { useFloating } from "@floating-ui/react";
 import { useState, useEffect } from "preact/hooks";
-import { isAppFullscreen, pepsimode, wallpaper } from "./Signals"
+import { isAppFullscreen, noOs, pepsimode, wallpaper } from "./Signals"
 const DesktopContextMenu = lazy(() => import("./lib/DesktopContextMenu"));
 const AppsWindowsManager = lazy(() => import("./lib/AppsWindowsManager"));
 const Taskbar =  lazy(() => import("./lib/Taskbar"));
 import WelcomePopup from "./lib/WelcomePopup";
 import BootScreen from "./BootScreen";
 import { Animated } from "react-animated-css";
+import NoOperatingSystem from "./lib/NoOperatingSystem";
+import('./style/animate.min.css');
 import('./style/animate.min.css');
 const DesktopAppIcon = lazy(() => import("./lib/DesktopAppIcon"));
 export default function Desktop() {
     const [showWelcome, setShowWelcome] = useState(false);
     const [wpReady, setWpReady] = useState(false);
+    const [showNoOs, setShowNoOs] = useState(false);
     const { refs, floatingStyles } = useFloating({placement: 'top'});
     const [showContextMenu, setShowContextMenu] = useState(false);
     const [pointerPosition, setPointerPosition] = useState({x: 0, y: 0})
@@ -23,17 +26,19 @@ export default function Desktop() {
         const img = new Image()
         img.src = `/wallpapers/${wallpaper.value}`;
         img.onload = () => setWpReady(true)
+        setShowNoOs(noOs.value);
         if (wpReady) {
           setTimeout(async () => {
             if (localStorage.getItem('hideWelcome') === 'true') return;
             setShowWelcome(true)
           }, 1000);
         }
-    }, [wpReady]);
+    }, [wpReady, noOs.value]);
 
     return (
       <>
         {!wpReady ? <BootScreen status={2}/> : <></>}
+        {showNoOs ? <NoOperatingSystem/> : <></>}
         {showContextMenu ? <Suspense fallback={<></>}><DesktopContextMenu x={pointerPosition.x} y={pointerPosition.y} hide={() => setShowContextMenu(false)} /></Suspense> : null}
         <div class='w-full h-screen flex flex-col bg-blue-800 bg-cover bg-center bg-no-repeat' style={{backgroundImage: wpReady ? `url("/wallpapers/${wallpaper.value}")` : ''}} onContextMenu={(e) => {
           e.preventDefault();
