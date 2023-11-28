@@ -57,6 +57,13 @@ const tools: Skill[] = [
 
 const projects = [
     {
+        title: "DartNodes (2023)",
+        subtitle: "Landing page for a hosting company (Preact + TailwindCSS + Vite)",
+        description: "A cool and modern landing page for a hosting company. Includes a Q&A section, a plans section, and more. I think it ended up looking pretty cool, I like that alex skin flying at the bottom of the page :D",
+        image: "https://iili.io/JxzSKnp.png",
+        link: "https://dartnodes.com",
+    },
+    {
         title: "Shadow's Dash (2023)",
         subtitle: "Fully featured client panel for Pterodactyl-based hosts (Svelte + Hapi)",
         description:
