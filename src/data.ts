@@ -84,7 +84,7 @@ const projects = [
       subtitle: "FullStack website to download YouTube videos without ads or pop-ups. (Node.js Hapi React MUI)",
       description:
           "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups.",
-      image: "https://i.imgur.com/OQQc7Kg.png",
+      image: "https://iili.io/JzGXGUB.png",
       link: "https://tube.xshadow.xyz",
     },
     {
