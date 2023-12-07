@@ -47,7 +47,7 @@ export default function Desktop() {
         }} 
         onMouseDown={(e) => {
           e.preventDefault();
-          setSelectionProperties({...selectionProperties, x: e.clientX, y: e.clientY, dragging: true})
+          setSelectionProperties({x: e.clientX, y: e.clientY, x1: e.clientX, y1:e.clientY, dragging: true})
         }}
         onMouseUp={() => {
           setSelectionProperties({...selectionProperties, dragging: false})
