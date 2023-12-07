@@ -1,5 +1,5 @@
 import { Rnd } from "react-rnd"
-import { useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { activeWindow } from "../Signals";
 import apps from "../apps/Apps";
 import { openApp } from "./AppsWindowsManager";
@@ -9,10 +9,11 @@ const customizeApp = apps.find((x) => x.name === 'os_customize')!;
 const aboutApp = apps.find((x) => x.name === 'os_about')!;
 
 export default function DesktopContextMenu(props:{x:number,y:number,hide:() => void}) {
+    const [resetActiveWindow, setResetActiveWindow] = useState(true);
     useEffect(() => {
         activeWindow.value = -2; // -2 is the desktop context menu
         return () => {
-            activeWindow.value = -1;
+            if (resetActiveWindow) activeWindow.value = -1;
         }
     }, []);
   return (
@@ -31,7 +32,8 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
     >
         <div class='flex flex-col rounded-md shadow w-full h-full bg-stone-700/30 border-white/10 border-[1px] py-2 backdrop-blur-sm text-md'>
             <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
-              openApp(customizeApp);
+              setResetActiveWindow(false);
+              setTimeout(() => openApp(customizeApp), 0);
               props.hide();
             }}>
               <img src='/context/customize.png' class='w-5 h-5'/>
@@ -39,7 +41,8 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
             </button>
 
             <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
-              openApp(aboutApp);
+              setResetActiveWindow(false);
+              setTimeout(() => openApp(aboutApp), 0);
               props.hide();
             }}>
               <img src='/context/about.png' class='w-5 h-5'/>
