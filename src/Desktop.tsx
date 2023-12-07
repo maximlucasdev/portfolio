@@ -21,6 +21,8 @@ export default function Desktop() {
     const [showContextMenu, setShowContextMenu] = useState(false);
     const [pointerPosition, setPointerPosition] = useState({x: 0, y: 0})
     const [selectionProperties, setSelectionProperties] = useState({x: 0, y: 0, x1:0, y1:0, dragging: false})
+    const [appFullScreen, setAppFullScreen] = useState(false);
+
     useEffect(() => {
         // Preload wallpaper
         const img = new Image()
@@ -34,7 +36,9 @@ export default function Desktop() {
           }, 1000);
         }
     }, [wpReady, noOs.value]);
-
+    useEffect(() => {
+      setAppFullScreen(isAppFullscreen.value);
+    }, [isAppFullscreen.value]);
     return (
       <>
       
@@ -65,7 +69,7 @@ export default function Desktop() {
               {top: selectionProperties.y < selectionProperties.y1 ? selectionProperties.y : selectionProperties.y1, left:selectionProperties.x < selectionProperties.x1 ? selectionProperties.x : selectionProperties.x1, width: selectionProperties.x < selectionProperties.x1 ? selectionProperties.x1 - selectionProperties.x : selectionProperties.x - selectionProperties.x1, height:selectionProperties.y < selectionProperties.y1 ? selectionProperties.y1 - selectionProperties.y : selectionProperties.y - selectionProperties.y1, visibility: selectionProperties.dragging ? 'visible' : 'hidden'}
             }></div>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
-            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen content-start'>
+            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen content-start' style={{visibility: appFullScreen ? 'hidden' : 'visible'}}>
                 {Apps.map((app) => {
                   if (app.name === "Pepsi" && !pepsimode.value) return null;
                   if (app.hide) return null;
