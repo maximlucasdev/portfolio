@@ -20,7 +20,7 @@ export default function Desktop() {
     const { refs, floatingStyles } = useFloating({placement: 'top'});
     const [showContextMenu, setShowContextMenu] = useState(false);
     const [pointerPosition, setPointerPosition] = useState({x: 0, y: 0})
-
+    const [selectionProperties, setSelectionProperties] = useState({x: 0, y: 0, x1:0, y1:0, dragging: false})
     useEffect(() => {
         // Preload wallpaper
         const img = new Image()
@@ -45,9 +45,23 @@ export default function Desktop() {
           setPointerPosition({x: e.clientX, y: e.clientY})
           setShowContextMenu(true);
         }} 
+        onMouseDown={(e) => {
+          e.preventDefault();
+          setSelectionProperties({...selectionProperties, x: e.clientX, y: e.clientY, dragging: true})
+        }}
+        onMouseUp={() => {
+          setSelectionProperties({...selectionProperties, dragging: false})
+        }}
+        onMouseMove={(e) => {
+          if (!selectionProperties.dragging) return;
+          setSelectionProperties({...selectionProperties, x1: e.clientX, y1: e.clientY, dragging: true})
+        }}
         onClick={() => {
           setShowContextMenu(false);
         }}>
+            <div class='bg-blue-500/30 absolute border-[1px] border-blue-500' style={
+              {top: selectionProperties.y < selectionProperties.y1 ? selectionProperties.y : selectionProperties.y1, left:selectionProperties.x < selectionProperties.x1 ? selectionProperties.x : selectionProperties.x1, width: selectionProperties.x < selectionProperties.x1 ? selectionProperties.x1 - selectionProperties.x : selectionProperties.x - selectionProperties.x1, height:selectionProperties.y < selectionProperties.y1 ? selectionProperties.y1 - selectionProperties.y : selectionProperties.y - selectionProperties.y1, visibility: selectionProperties.dragging ? 'visible' : 'hidden'}
+            }></div>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
             <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen content-start'>
                 {Apps.map((app) => {
