@@ -1,7 +1,7 @@
 import { mdiStar } from "@mdi/js";
 import { Icon } from "@mdi/react";
 import { useState } from "preact/hooks"; 
-export default function SkillCard(props:{skill:Skill}) {
+export default function SkillCard(props:{skill:Skill, showRating:boolean}) {
     const [hover, setHover] = useState(false);
     
   return (
@@ -11,7 +11,7 @@ export default function SkillCard(props:{skill:Skill}) {
         </div>
         <div class='flex flex-col gap-0'>
             <p class='px-2 flex gap-1 items-center'>{props.skill.name}</p>
-            {hover && props.skill.stars ? <div class='flex flex-row px-2'>
+            {hover && props.skill.stars && props.showRating ? <div class='flex flex-row px-2'>
             {/* for loop was not working for some reason */}
                 <Icon path={mdiStar} size={0.5} class={props.skill.stars > 0 ? 'text-amber-500' : 'text-gray-500'} />
                 <Icon path={mdiStar} size={0.5} class={props.skill.stars > 1 ? 'text-amber-500' : 'text-gray-500'} />

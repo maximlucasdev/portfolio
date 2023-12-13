@@ -7,7 +7,7 @@ import t from "../../i18n/i18n";
 export default function SkillsMain() {
     const [skills, setSkills] = useState<Skill[]>(languages);
     const [visible, setVisible] = useState(true);
-    const [selected, setSelected] = useState("Languages");
+    const [selected, setSelected] = useState(t("app.skills.content.languages"));
   return (
     <div class='bg-slate-900 h-full w-full md:rounded-b-md'>
         <div class='p-10 gap-5 text-center text-white w-full flex flex-col pt-20 items-center justify-center'>
@@ -28,7 +28,7 @@ export default function SkillsMain() {
                     return <div key={skills.indexOf(skill)}>
                         {/* @ts-ignore */}
                         <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={1000} animationOutDuration={300} animationInDelay={skills.indexOf(skill)*150} animationOutDelay={skills.indexOf(skill)*100} isVisible={visible}>
-                            <SkillCard skill={skill}/>
+                            <SkillCard skill={skill} showRating={true}/>
                         </Animated>
                     </div>
                 })}

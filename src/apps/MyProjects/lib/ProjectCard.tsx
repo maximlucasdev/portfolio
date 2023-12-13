@@ -1,3 +1,4 @@
+import { language } from "../../../Signals";
 import t from "../../../i18n/i18n";
 
 export default function ProjectCard(props:{project:Project,setViewProject:any}) {
@@ -10,8 +11,13 @@ export default function ProjectCard(props:{project:Project,setViewProject:any}) 
             <img src={props.project.image} alt={`${props.project.title} image`} loading="lazy" class='rounded-md'/>
         </button>
         <div class='p-2 text-center'>
-            <p class='text-xl'>{props.project.title}</p>
-            <p class='text-xs font-light text-gray-400'>{props.project.subtitle}</p>
+            <p class='text-xl font-bold'>{props.project.title}</p>
+            <p class='text-xs font-light text-gray-400'>{language.value == 'fr' ? props.project.subtitleFR : props.project.subtitleEN}</p>
+            <div class='flex items-center justify-center flex-wrap mt-2'>
+              {props.project.skillsName ? props.project.skillsName.map((skill) => {
+                  return <span class='text-xs bg-white/10 rounded-md p-1 m-1'>{skill}</span>
+              }) : <></>}
+            </div>
         </div>
         
     </div>

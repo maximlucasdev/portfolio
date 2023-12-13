@@ -26,10 +26,13 @@ interface Skill {
 
 interface Project {
     title: string,
-    subtitle: string,
-    description: string,
+    subtitleEN: string,
+    subtitleFR: string,
+    descriptionEN: string,
+    descriptionFR: string,
     image: string,
     link?: string,
+    skillsName?: string[],
 }
 
 interface NotificationContent {

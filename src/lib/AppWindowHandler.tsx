@@ -23,7 +23,7 @@ export default function AppWindowHandler(props:{app:App}) {
     return (
       <>
         {!isMobile && !fullScreen ?
-            (<div class={`absolute ${activeWindow.value === apps.indexOf(props.app) ? 'z-20' : 'z-10'}`}><Window app={props.app} toggleFullScreen={toggleFullScreen}/></div>)
+            (<div class={`absolute ${activeWindow.value === apps.indexOf(props.app) ? 'z-40' : 'z-30'}`}><Window app={props.app} toggleFullScreen={toggleFullScreen}/></div>)
         :
           (<div class='absolute w-screen h-screen'><WindowFullScreen app={props.app} toggleFullScreen={toggleFullScreen}/></div>)
         }
