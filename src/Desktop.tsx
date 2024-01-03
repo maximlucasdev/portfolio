@@ -10,6 +10,7 @@ import WelcomePopup from "./lib/WelcomePopup";
 import BootScreen from "./BootScreen";
 import { Animated } from "react-animated-css";
 import NoOperatingSystem from "./lib/NoOperatingSystem";
+import PhoneStatusBar from "./lib/PhoneStatusBar";
 import('./style/animate.min.css');
 import('./style/animate.min.css');
 const DesktopAppIcon = lazy(() => import("./lib/DesktopAppIcon"));
@@ -22,6 +23,21 @@ export default function Desktop() {
     const [pointerPosition, setPointerPosition] = useState({x: 0, y: 0})
     const [selectionProperties, setSelectionProperties] = useState({x: 0, y: 0, x1:0, y1:0, dragging: false})
     const [appFullScreen, setAppFullScreen] = useState(false);
+    // Mobile detection for status bar
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleResize = () => {
+      if (window.innerWidth < 768) setIsMobile(true)
+      else setIsMobile(false)
+    }
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize)
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
+    }, []);
 
     useEffect(() => {
         // Preload wallpaper
@@ -44,8 +60,9 @@ export default function Desktop() {
       
         {!wpReady ? <BootScreen status={2}/> : <></>}
         {showNoOs ? <NoOperatingSystem/> : <></>}
+        {isMobile ? <PhoneStatusBar/>: <></>}
         {showContextMenu ? <Suspense fallback={<></>}><DesktopContextMenu x={pointerPosition.x} y={pointerPosition.y} hide={() => setShowContextMenu(false)} /></Suspense> : null}
-        <div class='w-full h-screen flex flex-col bg-blue-800 bg-cover bg-center bg-no-repeat' style={{backgroundImage: wpReady ? `url("/wallpapers/${wallpaper.value}")` : ''}} onContextMenu={(e) => {
+        <div class='w-full h-screen flex flex-col bg-blue-800 bg-cover bg-center bg-no-repeat' style={{backgroundImage: wpReady ? `url("/wallpapers/${wallpaper.value}")` : '', paddingTop: isMobile ? 40 : 0}} onContextMenu={(e) => {
           e.preventDefault();
           setPointerPosition({x: e.clientX, y: e.clientY})
           setShowContextMenu(true);
@@ -69,7 +86,7 @@ export default function Desktop() {
               {top: selectionProperties.y < selectionProperties.y1 ? selectionProperties.y : selectionProperties.y1, left:selectionProperties.x < selectionProperties.x1 ? selectionProperties.x : selectionProperties.x1, width: selectionProperties.x < selectionProperties.x1 ? selectionProperties.x1 - selectionProperties.x : selectionProperties.x - selectionProperties.x1, height:selectionProperties.y < selectionProperties.y1 ? selectionProperties.y1 - selectionProperties.y : selectionProperties.y - selectionProperties.y1, visibility: selectionProperties.dragging ? 'visible' : 'hidden'}
             }></div>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
-            <div class='flex flex-col h-full flex-wrap gap-2 p-2 md:p-5 w-screen content-start' style={{visibility: appFullScreen ? 'hidden' : 'visible'}}>
+            <div class='flex md:flex-col items-baseline justify-evenly sm:justify-start gap-10 md:items-start px-5 py-10 md:px-5 md:py-5 md:justify-start h-full flex-wrap md:gap-2 p-2 md:p-5 w-screen content-start' style={{visibility: appFullScreen ? 'hidden' : 'visible'}}>
                 {Apps.map((app) => {
                   if (app.name === "Pepsi" && !pepsimode.value) return null;
                   if (app.hide) return null;
@@ -82,9 +99,9 @@ export default function Desktop() {
               <p class='absolute bottom-12 md:bottom-24 right-0 text-xs pr-2 pb-2 md:pb-0 md:pr-10 md:text-sm text-end text-white opacity-20'>© {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' class='hover:opacity-50 transition' target='_blank'> Maxim Lucas</a> {pepsimode.value ? <span class='text-xl'><br/>🐈 Pepsi Mode</span> : ''}</p>
             </Animated>
             
-            <div ref={refs.setReference} class='fixed bottom-0 w-screen z-50'>
+            {isMobile ? <></> : <div ref={refs.setReference} class='fixed bottom-0 w-screen z-50'>
               <Suspense fallback={<></>}><Taskbar/></Suspense>
-            </div>
+            </div>}
         </div>
       </>
     )

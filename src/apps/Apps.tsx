@@ -22,7 +22,7 @@ const apps: App[] = [
             minimizable: false,
             fullscreenable: false,
             transparentTitleBar:true,
-            title: t('app.aboutme')
+            title: t('app.aboutme'),
         },
         icon: '/apps/welcome.png',
         component: () => <Suspense fallback={<LoadingApp/>}><AboutMe/></Suspense>

@@ -39,3 +39,13 @@
 .blink {
   animation: blink 1s step-start 0s infinite;
 }
+
+::-moz-selection {
+  color: white;
+  background: #FFFFFF50;
+}
+
+::selection {
+  color: white;
+  background: #FFFFFF50;
+}

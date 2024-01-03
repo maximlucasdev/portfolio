@@ -41,3 +41,10 @@ interface NotificationContent {
     icon: string,
     date: Date
 }
+
+interface NavigatorBatteryStatus {
+    charging: boolean,
+    chargingTime: number,
+    dischargingTime: number,
+    level: number
+}
