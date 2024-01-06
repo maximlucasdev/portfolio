@@ -1,3 +1,4 @@
+declare module 'animate.css-react';
 interface App {
     name: string,
     window: {

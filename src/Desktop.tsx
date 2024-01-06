@@ -9,9 +9,9 @@ const Taskbar =  lazy(() => import("./lib/Taskbar"));
 import WelcomePopup from "./lib/WelcomePopup";
 import BootScreen from "./BootScreen";
 import { Animated } from "react-animated-css";
+import Animate from 'animate.css-react';
 import NoOperatingSystem from "./lib/NoOperatingSystem";
 import PhoneStatusBar from "./lib/PhoneStatusBar";
-import('./style/animate.min.css');
 import('./style/animate.min.css');
 const DesktopAppIcon = lazy(() => import("./lib/DesktopAppIcon"));
 export default function Desktop() {
@@ -93,12 +93,11 @@ export default function Desktop() {
                   return <Suspense fallback={<></>}><DesktopAppIcon app={app} /></Suspense>
                 })}
             </div>
-            {showWelcome ? (<div ref={refs.setFloating} style={floatingStyles}><WelcomePopup hide={() => {setShowWelcome(false)}}/></div>) : null}
+            {showWelcome ? (<div ref={refs.setFloating} style={floatingStyles} class="z-50"><WelcomePopup hide={() => {setShowWelcome(false)}} isMobile={isMobile}/></div>) : null}
             {/* @ts-ignore */}
             <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} isVisible={!isAppFullscreen.value}>
-              <p class='absolute bottom-12 md:bottom-24 right-0 text-xs pr-2 pb-2 md:pb-0 md:pr-10 md:text-sm text-end text-white opacity-20'>© {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' class='hover:opacity-50 transition' target='_blank'> Maxim Lucas</a> {pepsimode.value ? <span class='text-xl'><br/>🐈 Pepsi Mode</span> : ''}</p>
+              <p class={`absolute bottom-12 md:bottom-24 right-0 text-xs pr-2 pb-2 md:pb-0 md:pr-10 md:text-sm text-end text-white opacity-20`}>© {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' class='hover:opacity-50 transition' target='_blank'> Maxim Lucas</a> {pepsimode.value ? <span class='text-xl'><br/>🐈 Pepsi Mode</span> : ''}</p>
             </Animated>
-            
             {isMobile ? <></> : <div ref={refs.setReference} class='fixed bottom-0 w-screen z-50'>
               <Suspense fallback={<></>}><Taskbar/></Suspense>
             </div>}

@@ -6,6 +6,7 @@ import('./style/font.css');
 
 
 export function App() {
+
   return (<>
     <Suspense fallback={<></>}>
       <BatteryHelper/>
