@@ -48,6 +48,15 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
               <img src='/context/about.png' class='w-5 h-5'/>
               <p>{t("contextmenu.about")}</p>
             </button>
+
+            <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
+              setResetActiveWindow(false);
+              setTimeout(() => openApp(aboutApp), 0);
+              props.hide();
+            }}>
+              <img src='/context/about.png' class='w-5 h-5'/>
+              <p>Language/Langue</p>
+            </button>
         </div>
     </Rnd>
   )
