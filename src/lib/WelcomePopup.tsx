@@ -10,7 +10,7 @@ export default function WelcomePopup(props:{isMobile:boolean, hide: () => void})
   return (
     // @ts-ignore
     <Animated animationIn={props.isMobile ? "zoomIn" : "slideInUp"} animationInDuration={props.isMobile ? 200 : 500} animationOut="fadeOut" animationOutDuration={500} isVisible={visible}>
-      <div class='bg-stone-700/20 flex items-center justify-center md:block border-white/10 md:border-[1px] backdrop-blur-sm w-screen h-screen md:h-max md:w-[500px] rounded-lg px-2 md:px-5'>
+      <div class='bg-black/90 md:bg-stone-700/20 flex items-center justify-center md:block border-white/10 md:border-[1px] backdrop-blur-sm w-screen h-screen md:h-max md:w-[500px] rounded-lg px-2 md:px-5'>
         <div class='flex justify-center gap-2 items-center p-2 flex-wrap md:flex-nowrap'>
           <img src='/apps/welcome.png' class='w-24 h-24 mb-5 md:mb-0 md:w-20 md:h-20' alt="Waving hand"/>
           <div class='flex flex-col justify-center text-center md:text-left text-white md:text-gray-400'>
