@@ -9,7 +9,6 @@ const Taskbar =  lazy(() => import("./lib/Taskbar"));
 import WelcomePopup from "./lib/WelcomePopup";
 import BootScreen from "./BootScreen";
 import { Animated } from "react-animated-css";
-import Animate from 'animate.css-react';
 import NoOperatingSystem from "./lib/NoOperatingSystem";
 import PhoneStatusBar from "./lib/PhoneStatusBar";
 import('./style/animate.min.css');
