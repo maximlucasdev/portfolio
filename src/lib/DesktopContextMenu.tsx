@@ -30,22 +30,22 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
       dragHandleClassName='handle'
       bounds="window"
     >
-        <div class='flex flex-col rounded-md shadow w-full h-full bg-stone-700/30 border-white/10 border-[1px] py-2 backdrop-blur-sm text-md'>
-            <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
+        <div class='flex flex-col w-full h-full shadow-xl bg-white border-[1px] border-stone-400'>
+            <button class='flex flex-row items-center justify-start w-full hover:bg-[#5d81bd] hover:text-white text-black py-1 px-4 gap-2' onClick={() => {
               setResetActiveWindow(false);
               setTimeout(() => openApp(customizeApp), 0);
               props.hide();
             }}>
-              <img src='/context/customize.png' class='w-5 h-5'/>
+              <img src='/context/customize.png' class='w-4 h-4'/>
               <p>{t("contextmenu.customize")}</p>
             </button>
 
-            <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
+            <button class='flex flex-row items-center justify-start w-full hover:bg-[#5d81bd] hover:text-white text-black py-1 px-4 gap-2' onClick={() => {
               setResetActiveWindow(false);
               setTimeout(() => openApp(aboutApp), 0);
               props.hide();
             }}>
-              <img src='/context/about.png' class='w-5 h-5'/>
+              <img src='/context/about.png' class='w-4 h-4'/>
               <p>{t("contextmenu.about")}</p>
             </button>
         </div>

@@ -1,6 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/tahoma');
+@import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
+
+@font-face {
+    font-family: "Terminal";
+    src: url('/fonts/console.ttf');
+}
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     overflow:hidden;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    font-size: 11px;
+}
+
+.trebuchet {
+    font-family: 'Trebuchet MS', sans-serif;
 }

@@ -49,3 +49,107 @@
   color: white;
   background: #FFFFFF50;
 }
+
+.theme-bg {
+  background:linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 100%) center/cover no-repeat;
+}
+
+.taskbar-clock-bg {
+  background:linear-gradient(to bottom, #14A3F0 0%, #7ed2ff 9%, #14A3F0 18%, #14A3F0 100%) center/cover no-repeat;
+}
+
+
+.startbtn-bg {
+  background-image: url('/startbtn/normal.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.startbtn-bg:hover {
+  background-image: url('/startbtn/hover.webp');
+}
+
+.startbtn-bg:active {
+  background-image: url('/startbtn/click.webp');
+}
+
+.startbtn-bg-active {
+  background-image: url('/startbtn/click.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.appfont {
+  text-shadow: 1px 1px 1px #000;
+}
+
+.bg-logon {
+  background-image: url('logon.webp');
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+.window {
+  box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda, inset 3px 3px #0855dd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0 0 3px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.title-bar {
+  background: linear-gradient(
+      180deg,
+      rgba(9, 151, 255, 1) 0%,
+      rgba(0, 83, 238, 1) 8%,
+      rgba(0, 80, 238, 1) 40%,
+      rgba(0, 102, 255, 1) 88%,
+      rgba(0, 102, 255, 1) 93%,
+      rgba(0, 91, 255, 1) 95%,
+      rgba(0, 61, 215, 1) 96%,
+      rgba(0, 61, 215, 1) 100%
+  );
+  padding: 3px 5px 3px 3px;
+  border-top: 1px solid #0831d9;
+  border-left: 1px solid #0831d9;
+  border-right: 1px solid #001ea0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 7px;
+  font-size: 13px;
+  text-shadow: 1px 1px #0f1089;
+}
+
+.button-maximise {
+  background-image: url("/buttons/maximize.svg");
+  height: 20px;
+  width: 20px;
+}
+
+.button-maximise:hover {
+  background-image: url("/buttons/maximize-hover.svg");
+}
+
+.button-maximise:active {
+  background-image: url("/buttons/maximize-active.svg");
+}
+
+.button-close {
+  background-image: url("/buttons/close.svg");
+  height: 20px;
+  width: 20px;
+}
+
+.button-close:hover {
+  background-image: url("/buttons/close-hover.svg");
+}
+
+.button-close:active {
+  background-image: url("/buttons/close-active.svg");
+}
+
+.openeditem {
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
+  background-color: rgb(60, 129, 243);
+  border-radius: 2px;
+}

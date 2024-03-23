@@ -19,9 +19,9 @@ export default function Terminal() {
       document.getElementById(termInputId).focus();
     }
     return (
-      <div className="bg-zinc-800 w-full h-full md:h-96 rounded-b-md" onClick={() => focusInput()}>
-          <div className='flex flex-col justify-end'>
-            <div className='font-mono w-full h-full md:h-96 p-3 text-white overflow-y-scroll noscrollbar' style={{height: window.innerWidth < 768 ? window.innerHeight-100 : 385}} id={termId}>
+      <div className="bg-zinc-900 w-full h-full" onClick={() => focusInput()}>
+          <div className='flex flex-col justify-end text-sm' style={{fontFamily:'Terminal'}}>
+            <div className='w-full p-3 text-white overflow-y-scroll noscrollbar max-h-[350px]' id={termId}>
               <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PortfoliOS 1.0.0 (x64)</span><br/><br/>
                 * Website:  https://xshadow.xyz | https://maximlucas.dev<br/>
                 * Support:  hello@xshadow.xyz
@@ -37,7 +37,7 @@ export default function Terminal() {
               })}
               <p>
                 visitor@maxluc:~$ 
-                <input id={termInputId} className='ml-2 bg-zinc-800 focus:outline-none' style={{width: inputData.length === 0 ? 1 : `${inputData.length}ch`}} placeholder='' value={inputData} onChange={(value) => {inputHandler(value.target.value)}} onKeyDown={(key) => {
+                <input id={termInputId} className='ml-2 bg-transparent focus:outline-none' style={{width: inputData.length === 0 ? 1 : `${inputData.length}ch`}} placeholder='' value={inputData} onChange={(value) => {inputHandler(value.target.value)}} onKeyDown={(key) => {
                     switch (key.keyCode) { // Had to use deprecated keycode to prevent compatibility issues
                       case 13:
                         setInputData(inputData.toLowerCase().trimEnd());

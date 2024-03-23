@@ -41,35 +41,27 @@ export default function Taskbar() {
         {activeWindow.value === -5 ? (<div ref={languageFloat.refs.setFloating} style={languageFloat.floatingStyles}><TaskbarLanguagePopup/></div>) : null}
         {activeWindow.value === -4 ? (<div ref={settingsFloat.refs.setFloating} style={settingsFloat.floatingStyles}><TaskbarSettingsPopup/></div>) : null}
         {activeWindow.value === -3 ? (<div ref={startFloat.refs.setFloating} style={startFloat.floatingStyles}><TaskbarStartMenu/></div>) : null}
-        <div class='md:p-5'>
-            <div class='flex md:rounded-md justify-between flex-row items-center w-full h-14 bg-stone-700/30 border-white/10 md:border-[1px] px-2 md:pr-5 backdrop-blur-sm'>
-                <div class='flex flex-row items-center gap-2'>
-                    <button ref={startFloat.refs.setReference} aria-label="Start menu" class='mr-2 md:mr-10 ml-2' onClick={() => activeWindow.value = activeWindow.value === -3 ? -1 : -3}>
-                        <img src={pepsimode.value ? '/cat.svg' : '/logo.svg'} alt="Start menu logo" class='w-8 h-8 hover:scale-125 transition hover:rotate-[360deg]' />
-                    </button>
+        <div>
+            <div class='flex theme-bg justify-between flex-row items-center w-full h-10 bg-stone-700/30 border-white/10 md:border-[1px] backdrop-blur-sm'>
+                <div class='flex flex-row items-center gap-2 h-full'>
+                    <button ref={startFloat.refs.setReference} aria-label="Start menu" class={`flex gap-2 items-center justify-center mr-2 h-full w-32 ${activeWindow.value == -3 ? 'startbtn-bg-active' : 'startbtn-bg'}`} onClick={() => activeWindow.value = activeWindow.value === -3 ? -1 : -3}/>
                     {openedWindows.value.map((appid) => {
                         return <TaskbarRunningTaskElement app={Apps[appid]}/>
                     })}
                 </div>
-                <div class='flex flex-row items-center'>
-                    <div class='flex flex-row md:gap-5 items-center'>
-                        <button class='block md:hidden mr-3 transition scale-110 hover:scale-125' aria-label="Customize" onClick={() => {openApp(customizeApp);}}>
-                            <Icon path={mdiBrush} size={0.9} className='text-white'/>
-                        </button>
-                        <button class='block md:hidden mr-3 transition scale-110 hover:scale-125' aria-label="About website" onClick={() => {openApp(aboutApp);}}>
-                            <Icon path={mdiInformation} size={0.9} className='text-white'/>
-                        </button>
-                        <button ref={languageFloat.refs.setReference} class='flex flex-col gap-1 items-center hover:bg-white/5 p-2 md:p-3 rounded-md border-t-[1px] border-transparent hover:border-white/5 transition' aria-label="Change language" onClick={() => {
+                <div class='flex flex-row items-center h-full'>
+                    <div class='flex flex-row md:gap-5 items-center h-full taskbar-clock-bg px-5 border-l-[1px] border-zinc-800/30'>
+                        <button ref={languageFloat.refs.setReference} class='flex flex-col justify-center gap-1 items-center h-full' aria-label="Change language" onClick={() => {
                             activeWindow.value = activeWindow.value === -5 ? -1 : -5;
                         }}>
                             <Icon path={mdiTranslate} size={0.9} className='text-white'/>
                         </button>
-                        <button ref={settingsFloat.refs.setReference} class='flex flex-col gap-1 items-center hover:bg-white/5 p-2 md:p-3 rounded-md border-t-[1px] border-transparent hover:border-white/5 transition' onClick={() => {
+                        <button ref={settingsFloat.refs.setReference} class='flex flex-col justify-center gap-1 items-center h-full' onClick={() => {
                             activeWindow.value = activeWindow.value === -4 ? -1 : -4;
                         }}>
                             <div class='flex flex-row gap-3 items-center'>
-                                <Icon path={mdiWifi} size={0.9} className='text-white'/>
-                                <Icon path={mdiVolumeHigh} size={0.9} className='text-white'/>
+                                <img src='/icons/network.png' class='w-5 h-5' alt="Connected"/>
+                                <img src='/icons/sound.png' class='w-5 h-5' alt="Connected"/>
                             </div>
                             <div class='font-mono text-xs text-white block md:hidden'>
                                 {time.toLocaleTimeString()}

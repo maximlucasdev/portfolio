@@ -38,21 +38,20 @@ export default function Window(props:{app:App,toggleFullScreen: () => void}) {
             onDrag={() => {activeWindow.value = Apps.indexOf(props.app)}}
             onResize={() => {activeWindow.value = Apps.indexOf(props.app)}}
           >
-              <div class='flex flex-col shadow-xl w-full h-full relative'>
+              <div class='flex flex-col shadow-xl w-full h-full relative theme-bg p-[2px] window'>
                 {props.app.window.showTitle !== false ?
-                  <div className={`flex h-11 flex-row justify-between z-50 p-2 border-b-[1px] w-full absolute rounded-t-md border-white/10 handle ${props.app.window.transparentTitleBar ? 'absolute top-0 w-full' : 'bg-zinc-800'}`}>
+                  <div className={`theme-bg flex h-8 flex-row justify-between z-50 p-2 border-b-[1px] w-full absolute rounded-t-md border-white/10 handle ${props.app.window.transparentTitleBar ? 'absolute top-0 w-full' : 'bg-zinc-800'} title-bar`}>
                       <div class='flex gap-2 items-center'>
                         <img src={props.app.icon} class='w-5 h-5'/>
-                        <p className='text-white'>{props.app.window.title}</p>
+                        <p className='text-white trebuchet font-bold appfont'>{props.app.window.title}</p>
                       </div>
-                      <div className='flex flex-row gap-2 items-center'>
-                        {props.app.window.minimizable ? <div className='bg-green-500 hover:bg-green-300 transition rounded-full h-3 w-3'/> : <div className='bg-green-500/20 rounded-full h-3 w-3 cursor-not-allowed'/>}
-                        {props.app.window.maximizable ? <button className='bg-yellow-500 hover:bg-yellow-300 transition rounded-full h-3 w-3' onClick={props.toggleFullScreen}/> : <div className='bg-yellow-500/20 rounded-full h-3 w-3 cursor-not-allowed'/>}
-                        <button className='bg-red-500 hover:bg-red-300 transition rounded-full h-3 w-3' onClick={() => {closeWindow()}}/> 
+                      <div className='flex flex-row gap-1 items-center'>
+                        {props.app.window.maximizable ? <button className='button-maximise' onClick={props.toggleFullScreen}/> : <></>}
+                        <button className='button-close' onClick={() => {closeWindow()}}/> 
                       </div>
                   </div>
                 : null}
-                <div class={`w-full h-full rounded-md ${props.app.window.transparentTitleBar ? 'pt-0' : 'pt-11'}`}>
+                <div class={`w-full h-full p-[3px] pb-[1px] rounded-t-lg ${props.app.window.transparentTitleBar ? 'pt-0' : 'pt-8'}`}>
                   <Content/>
                 </div>
               </div>
