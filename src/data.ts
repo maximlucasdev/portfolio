@@ -88,12 +88,12 @@ const projects: Project[] = [
     },
     {
       title: "SudokuSolver (2023)",
-      subtitleEN: "French only: A project simulating fish and genetic evolution for a school project.",
+      subtitleEN: "French only: A web recursive sudoku solver using backtracking.",
       subtitleFR: "Un résolveur de sudoku web récursif utilisant le backtracking.",
       descriptionEN:
-          "FRENCH PROJECT | Private project completed at the end of 2023, made public to share. Created using Preact and Vite, this Sudoku solver accepts any problem in matrix form and solves it using recursive BackTracking.",
+          "FRENCH PROJECT | Private project completed at the end of 2023, made public to share. Created using Preact and Vite, this Sudoku solver accepts any problem in matrix form and solves it using recursive BackTracking. To try it, use the link above next to the project title.",
       descriptionFR:
-          "Projet privé réalisé fin 2023, mis publique pour partager. Créé en utilisant Preact et Vite, ce résolveur de Sudoku accèpte n'importe quel problème sous forme de matrice et le résout en utilisant le BackTracking récursif.",
+          "Projet privé réalisé fin 2023, mis publique pour partager. Créé en utilisant Preact et Vite, ce résolveur de Sudoku accèpte n'importe quel problème sous forme de matrice et le résout en utilisant le BackTracking récursif. Pour l'essayer, utilisez le lien ci-dessus à côté du titre du projet.",
       image: "/projets/sudoku.webp",
       link: "https://github.com/shadowdevfr/sudokusolver",
       skillsName: ["Preact", "TypeScript", "Vite"]
@@ -107,6 +107,18 @@ const projects: Project[] = [
         image: "/projets/dartnodes.webp",
         link: "https://dartnodes.com",
         skillsName: ["Preact", "TailwindCSS", "Vite"]
+    },
+    {
+      title: "OptikServers.com (2023)",
+      subtitleEN: "Free hosting services for Minecraft servers, Discord bots and more. Since 2021.",
+      subtitleFR: "Services d'hébergement gratuits pour les serveurs Minecraft, les bots Discord et plus encore. Depuis 2021.",
+      descriptionEN:
+        "I'm one of the founders of OptikServers.com, a service that provides free 24/7 hosting services for Minecraft servers, Discord bots and more. I was in charge of the development of the Discord bot, and participated in the developement of the client area.",
+      descriptionFR:
+        "Je suis l'un des fondateurs d'OptikServers.com, un service qui fournit des services d'hébergement gratuits 24/7 pour les serveurs Minecraft, les bots Discord et plus encore. J'étais en charge du développement du bot Discord, et j'ai participé au développement de l'espace client.",
+      image: "/projets/optikserverscom.webp",
+      link: "https://optikservers.com",
+      skillsName: ["Preact", "TailwindCSS", "Vite", "System administration"]
     },
     {
       title: "HostApp (2023)",
@@ -144,18 +156,7 @@ const projects: Project[] = [
       image: "/projets/wolfer.webp",
       skillsName: ["React", "React Native Expo", "Hapi", "Node.js", "Redis", "MySQL", "TailwindCSS", "Socket.io", "Vite"]
     },
-    {
-      title: "OptikServers.com (2021)",
-      subtitleEN: "Free hosting services for Minecraft servers, Discord bots and more.",
-      subtitleFR: "Services d'hébergement gratuits pour les serveurs Minecraft, les bots Discord et plus encore.",
-      descriptionEN:
-        "I'm one of the founders of OptikServers.com, a service that provides free 24/7 hosting services for Minecraft servers, Discord bots and more. I was in charge of the development of the Discord bot, and participated in the developement of the client area.",
-      descriptionFR:
-        "Je suis l'un des fondateurs d'OptikServers.com, un service qui fournit des services d'hébergement gratuits 24/7 pour les serveurs Minecraft, les bots Discord et plus encore. J'étais en charge du développement du bot Discord, et j'ai participé au développement de l'espace client.",
-      image: "/projets/optikservers.webp",
-      link: "https://optikservers.com",
-      skillsName: ["PHP", "MySQL"]
-    },
+    
     {
       title: "QuackHost.uk (2020)",
       subtitleEN: "Client panel for pterodactyl-based hosts. First big project! (PHP)",
