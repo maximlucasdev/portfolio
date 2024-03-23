@@ -42,7 +42,7 @@ export default function Taskbar() {
         {activeWindow.value === -4 ? (<div ref={settingsFloat.refs.setFloating} style={settingsFloat.floatingStyles}><TaskbarSettingsPopup/></div>) : null}
         {activeWindow.value === -3 ? (<div ref={startFloat.refs.setFloating} style={startFloat.floatingStyles}><TaskbarStartMenu/></div>) : null}
         <div>
-            <div class='flex theme-bg justify-between flex-row items-center w-full h-10 bg-stone-700/30 border-white/10 md:border-[1px] backdrop-blur-sm'>
+            <div class='translate-y-1 flex theme-bg justify-between flex-row items-center w-full h-10 bg-stone-700/30 border-white/10 md:border-[1px] backdrop-blur-sm'>
                 <div class='flex flex-row items-center gap-2 h-full'>
                     <button ref={startFloat.refs.setReference} aria-label="Start menu" class={`flex gap-2 items-center justify-center mr-2 h-full w-32 ${activeWindow.value == -3 ? 'startbtn-bg-active' : 'startbtn-bg'}`} onClick={() => activeWindow.value = activeWindow.value === -3 ? -1 : -3}/>
                     {openedWindows.value.map((appid) => {
