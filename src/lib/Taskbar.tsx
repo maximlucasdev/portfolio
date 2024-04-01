@@ -1,19 +1,14 @@
 import { useEffect, useState } from "preact/hooks";
 import TaskbarRunningTaskElement from "./TaskbarRunningTaskElement";
 import Apps from "../apps/Apps";
-import { activeWindow, isAppFullscreen, openedWindows, pepsimode } from "../Signals";
+import { activeWindow, isAppFullscreen, openedWindows } from "../Signals";
 import TaskbarSettingsPopup from "./TaskbarSettingsPopup";
 import { useFloating } from "@floating-ui/react-dom";
-import apps from "../apps/Apps";
-import { openApp } from "./AppsWindowsManager";
 import TaskbarStartMenu from "./TaskbarStartMenu";
 import Icon from "@mdi/react";
-import { mdiBrush, mdiInformation, mdiTranslate, mdiVolumeHigh, mdiWifi } from "@mdi/js";
+import {mdiTranslate} from "@mdi/js";
 import { Animated } from "react-animated-css";
 import TaskbarLanguagePopup from "./TaskbarLanguagePopup";
-
-const customizeApp = apps.find((x) => x.name === 'os_customize')!;
-const aboutApp = apps.find((x) => x.name === 'os_about')!;
 
 export default function Taskbar() {
     const [time, setTime] = useState(new Date());
