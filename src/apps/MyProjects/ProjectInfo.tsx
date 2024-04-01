@@ -17,7 +17,7 @@ export default function ProjectInfo(props:{project:Project,setViewProject: any})
                     <div class='flex items-center justify-center gap-2'>
                         {props.project.skillsName ? props.project.skillsName.map((skill) => {
                             return <span class='text-md bg-white/10 rounded-md px-2 py-1 m-1'>{skill}</span>
-                        }) : <></>}
+                        }) : <></> }
                     </div>
                 </div>
                 <div class='flex flex-col items-center p-5 h-full gap-4'>
