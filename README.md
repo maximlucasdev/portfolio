@@ -1,20 +1,35 @@
-<p float="left" align="center">
-  <img src="https://i.imgur.com/U9lFsUG.jpeg" width=15% />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/b1a39cz.png" width=40% />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/n0C9kvJ/o.png" width=15% height=10%/>
-</p>
+🇫🇷 Vous êtes français comme moi? Accèdez à mon readme français avec mon portfolio, mon adresse e-mail et ce qu'il faut pour me contacter en français [ici](https://github.com/shadowdevfr/shadowdevfr/blob/main/README_fr.md)
 
-### Hi! Welcome to my profile!
-I'm X_Shadow_, and I'm french<br/> 
-I ❤ 🥖.<br/> 
-I have a cat called pepsi which is really poggers: you can get a picture of him on [random.pepsi.xshadow.xyz](https://random.pepsi.xshadow.xyz)<br/> 
-Some people might know me as shaguette.<br/><br/>
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I87ZFES)
+# Hi there! 👋
 
-## Github stats
-[![My github stats](https://github-readme-stats.vercel.app/api?username=shadowdevfr&count_private=true&include_all_commits=true&theme=vision-friendly-dark&show_icons=true)](https://shadowdev.ga)
+I'm a 17-year-old high school student with a passion for programming. Currently on the lookout for small jobs in the field, I have a relatively good experience in programming and I always want to learn more and explore new technologies!
 
-## How can you contact me:
-By email, at **contact@xshadow.xyz**
-With Discord, on my discord server ([discord.gg/Rp4ea8mX3k](https://discord.gg/Rp4ea8mX3k))
-Via twitter, @x_shadow_gc
+## About Me
+
+- 🇫🇷 I speak french and english.
+- 🎓 Currently in high school
+- 💻 Passionate about programming since I was a kid
+- 🌱 Always eager to learn and explore new technologies
+- 🚀 Motivated to continuously improve
+
+## Skills
+
+- **Languages:** Python, JavaScript, TypeScript, VB.net 👴, C#, Go (I'm still learning)
+- **Technologies:** React, Svelte, React Native Expo, Node.js, BunJS, Electron, Hapi, Elysia, discord.js, Tailwind CSS, Preact, Vite and more
+- **Tools / Softwares / Misc:** Visual Studio 2022, Visual Studio Code, GitHub, Docker, Docker Compose, Ubuntu, Alpine Linux...
+  
+You can visit my portfolio at https://xshadow.xyz, that I made all by myself (I tried to make an original one, and I'm kind of happy with the results!) and is open-source.
+
+## Projects
+
+I've worked on a lot of projects! You can find them on my portfolio, available at https://xshadow.xyz.
+
+## Get in Touch
+
+I'm always open to new opportunities and conversations! Feel free to reach out to me via email at **contact@xshadow.xyz**.
+
+If you want to work with me, send me an email, and I'll try to do my best to work with you! 🚀
+
+
+#### Portfolio license
+This readme is also my portfolio's readme. My portfolio is licensed under GNU GPL v3.0. You can find the license in the [LICENSE](https://github.com/shadowdevfr/shadowdevfr/blob/main/LICENSE) file in the root of this repository, where you will find the conditions of use of my portfolio. Thanks! 😊
