@@ -59,11 +59,12 @@ const apps: App[] = [
         name: t('app.terminal'),
         window: {
             width: 600,
-            height: 384,
+            height: 420,
             resizable: false,
             maximizable: false,
             minimizable: false,
             fullscreenable: false,
+            fillTitlebar: true,
             title: t('app.terminal')
         },
         icon: '/apps/terminal.png',
@@ -105,6 +106,7 @@ const apps: App[] = [
             resizable: true,
             maximizable: true,
             minimizable: true,
+            fillTitlebar: true,
             fullscreenable: true,
             title: 'Visual Studio Code'
         },

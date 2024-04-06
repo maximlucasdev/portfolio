@@ -22,7 +22,7 @@ export default function ProjectInfo(props:{project:Project,setViewProject: any})
                 </div>
                 <div class='flex flex-col items-center p-5 h-full gap-4'>
                     <p class='text-md md:text-lg'>{language.value == 'fr' ? props.project.descriptionFR : props.project.descriptionEN}</p>
-                    <img src={props.project.image} alt="Screenshot" class='h-auto  max-w-5xl rounded-md'/>
+                    <img src={props.project.image} alt="Screenshot" class='h-auto w-full max-w-5xl rounded-md'/>
                 </div>
             </div>
         </div>

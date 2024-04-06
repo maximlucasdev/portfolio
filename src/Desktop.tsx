@@ -6,13 +6,16 @@ import { activeWindow, isAppFullscreen, noOs, pepsimode, wallpaper } from "./Sig
 const DesktopContextMenu = lazy(() => import("./lib/DesktopContextMenu"));
 const AppsWindowsManager = lazy(() => import("./lib/AppsWindowsManager"));
 const Taskbar =  lazy(() => import("./lib/Taskbar"));
+const TopBar =  lazy(() => import("./lib/TopBar"));
+
 import WelcomePopup from "./lib/WelcomePopup";
 import BootScreen from "./BootScreen";
 import { Animated } from "react-animated-css";
 import NoOperatingSystem from "./lib/NoOperatingSystem";
 import PhoneStatusBar from "./lib/PhoneStatusBar";
+import t from "./i18n/i18n";
 import('./style/animate.min.css');
-const DesktopAppIcon = lazy(() => import("./lib/DesktopAppIcon"));
+const DesktopAppIconMobile = lazy(() => import("./lib/DesktopAppIconMobile"));
 export default function Desktop() {
     const [showWelcome, setShowWelcome] = useState(false);
     const [wpReady, setWpReady] = useState(false);
@@ -61,6 +64,9 @@ export default function Desktop() {
         {showNoOs ? <NoOperatingSystem/> : <></>}
         {isMobile ? <PhoneStatusBar/>: <></>}
         {showContextMenu ? <Suspense fallback={<></>}><DesktopContextMenu x={pointerPosition.x} y={pointerPosition.y} hide={() => setShowContextMenu(false)} /></Suspense> : null}
+        {!isMobile ? <Suspense fallback={<></>}><TopBar/></Suspense> : <></>}
+        <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
+
         <div class='w-full h-screen flex flex-col bg-blue-800 bg-cover bg-center bg-no-repeat' style={{backgroundImage: wpReady ? `url("/wallpapers/${wallpaper.value}")` : '', paddingTop: isMobile ? 40 : 0}} onContextMenu={(e) => {
           e.preventDefault();
           setPointerPosition({x: e.clientX, y: e.clientY})
@@ -84,20 +90,23 @@ export default function Desktop() {
             <div class='bg-blue-500/30 absolute border-[1px] border-blue-500' style={
               {top: selectionProperties.y < selectionProperties.y1 ? selectionProperties.y : selectionProperties.y1, left:selectionProperties.x < selectionProperties.x1 ? selectionProperties.x : selectionProperties.x1, width: selectionProperties.x < selectionProperties.x1 ? selectionProperties.x1 - selectionProperties.x : selectionProperties.x - selectionProperties.x1, height:selectionProperties.y < selectionProperties.y1 ? selectionProperties.y1 - selectionProperties.y : selectionProperties.y - selectionProperties.y1, visibility: selectionProperties.dragging ? 'visible' : 'hidden'}
             }></div>
-            <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>
-            <div class='flex md:flex-col items-baseline justify-evenly sm:justify-start gap-10 md:items-start px-5 py-10 md:px-5 md:py-5 md:justify-start h-full flex-wrap md:gap-2 p-2 md:p-5 w-screen content-start' style={{visibility: appFullScreen ? 'hidden' : 'visible'}}>
+            {/* Mobile only - shows apps in a grid format like a home screen */}
+            {isMobile ? <div class='flex mt-8 items-baseline justify-evenly sm:justify-start gap-10  px-5 py-10 h-full flex-wrap p-2 w-screen content-start' style={{visibility: appFullScreen ? 'hidden' : 'visible'}}>
                 {Apps.map((app) => {
                   if (app.name === "Pepsi" && !pepsimode.value) return null;
                   if (app.hide) return null;
-                  return <Suspense fallback={<></>}><DesktopAppIcon app={app} /></Suspense>
+                  return <Suspense fallback={<></>}><DesktopAppIconMobile app={app} /></Suspense>
                 })}
-            </div>
+            </div> : <></>}
             {showWelcome ? (<div ref={refs.setFloating} style={floatingStyles} class="z-50"><WelcomePopup hide={() => {setShowWelcome(false)}} isMobile={isMobile}/></div>) : null}
-            {/* @ts-ignore */}
             <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} isVisible={!isAppFullscreen.value}>
-              <p class={`absolute bottom-12 md:bottom-24 right-0 text-xs pr-2 pb-2 md:pb-0 md:pr-10 md:text-sm text-end text-white opacity-20`}>© {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' class='hover:opacity-50 transition' target='_blank'> Maxim Lucas</a> {pepsimode.value ? <span class='text-xl'><br/>🐈 Pepsi Mode</span> : ''}</p>
+              <p class={`absolute bottom-0 md:bottom-5 right-0 text-xs pr-2 pb-2 md:pb-0 md:pr-5 md:text-sm text-end text-white opacity-20`}>© {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' class='hover:opacity-50 transition' target='_blank'> Maxim Lucas</a> {pepsimode.value ? <span class='text-xl'><br/>🐈 Pepsi Mode</span> : ''}</p>
             </Animated>
-            {isMobile ? <></> : <div ref={refs.setReference} class='fixed bottom-0 w-screen z-50'>
+            <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} isVisible={!isAppFullscreen.value}>
+              <p class='md:hidden w-full text-center absolute bottom-10 text-lg text-white'>{t('looksbetteronpc')}</p>
+            </Animated>
+            
+            {isMobile || showNoOs ? <div ref={refs.setReference}></div> : <div ref={refs.setReference} class='fixed bottom-0 w-screen z-50'>
               <Suspense fallback={<></>}><Taskbar/></Suspense>
             </div>}
         </div>

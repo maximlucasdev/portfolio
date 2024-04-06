@@ -5,9 +5,8 @@ import { language } from "../Signals";
 
 export default function TaskbarLanguagePopup() {
   return (
-    // @ts-ignore
-    <Animated animationIn="slideInUp" animationInDuration={200} visible={true} className='pb-3'>
-      <div class='flex flex-col rounded-md h-max w-44 mb-5 bg-stone-700/20 border-white/10 md:border-[1px] backdrop-blur-sm '>
+    <Animated animationIn="slideInDown" animationInDuration={200} animationOut="fadeOut" isVisible={true} className='pt-3'>
+      <div class='flex flex-col rounded-md h-max w-44 mb-5 border-[1px] border-white/10 bg-white/5 backdrop-blur-2xl '>
         <button class='flex flex-row items-center gap-2 p-3 border-b-[1px] border-white/10 text-white text-lg hover:bg-white/10 transition rounded-t-md' onClick={() => {
           localStorage.setItem("language", "fr");
           window.location.reload();

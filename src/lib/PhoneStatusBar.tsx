@@ -18,7 +18,7 @@ export default function PhoneStatusBar() {
         </div>
         <div class='flex gap-2 items-center'>
             <div class='flex items-center gap-1'>
-              <Icon path={batteryIconFromLevel(batterySignal.value.level, batterySignal.value.charging)} horizontal size={0.8}/>
+              <Icon path={batteryIconFromLevel(batterySignal.value.level, batterySignal.value.charging)!} horizontal size={0.8}/>
               <p>{batterySignal.value.level}%</p>
             </div>
         </div>

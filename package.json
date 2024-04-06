@@ -9,23 +9,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.25.2",
+    "@floating-ui/react": "^0.26.11",
     "@mdi/js": "^7.2.96",
     "@mdi/react": "^1.6.1",
     "@preact/signals": "^1.2.1",
-    "@types/react-rnd": "^8.0.0",
     "preact": "^10.16.0",
     "react-animated-css": "^1.2.1",
     "react-rnd": "^10.4.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@types/react-rnd": "^8.0.0",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3",
     "tw-colors": "^3.3.1",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^5.2.8"
   },
   "description": "<p float=\"left\" align=\"center\">\r   <img src=\"https://i.imgur.com/U9lFsUG.jpeg\" width=15% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.imgur.com/b1a39cz.png\" width=40% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.ibb.co/n0C9kvJ/o.png\" width=15% height=10%/>\r </p>",
   "repository": {
