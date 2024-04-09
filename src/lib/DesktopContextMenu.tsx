@@ -17,7 +17,6 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
         }
     }, []);
   return (
-    // @ts-ignore
     <Rnd
       default={{
         //x: 20,
@@ -30,7 +29,7 @@ export default function DesktopContextMenu(props:{x:number,y:number,hide:() => v
       dragHandleClassName='handle'
       bounds="window"
     >
-        <div class='flex flex-col rounded-md shadow w-full h-full bg-stone-700/30 border-white/10 border-[1px] py-2 backdrop-blur-sm text-md'>
+        <div class='flex flex-col rounded-md shadow w-full h-full border-[1px] border-white/10 bg-white/5 backdrop-blur-2xl py-2 text-md'>
             <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white py-2 px-4 gap-2 transition' onClick={() => {
               setResetActiveWindow(false);
               setTimeout(() => openApp(customizeApp), 0);

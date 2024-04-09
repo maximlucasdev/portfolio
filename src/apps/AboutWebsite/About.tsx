@@ -8,7 +8,7 @@ export default function AboutWebsite() {
     <div class='bg-slate-700 text-white rounded-md pt-12 h-full w-full flex flex-col items-center text-center text-md'>
       <div class='flex flex-row gap-2 items-end justify-center w-full py-5 '>
       <h1 class='font-bold text-4xl gradient-text'>{pepsimode.value ? 'Pepsi OS' : 'PortfoliOS'}</h1>
-        <p class='font-mono text-sm opacity-50'>v1.0.0 {pepsimode.value ? ' - 🐈 Pepsi mode' : ''}</p>
+        <p class='font-mono text-sm opacity-50'>v1.1.2 {pepsimode.value ? ' - 🐈 Pepsi mode' : ''}</p>
       </div>
 
       <div class='flex flex-col gap-2 w-full h-full p-5 text-start text-md font-light'>

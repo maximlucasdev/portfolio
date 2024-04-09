@@ -21,7 +21,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "paths": {"*": ["./node_modules/@types/*", "./node_modules/*"]}
+    "paths": {
+      "*": ["./node_modules/@types/*", "./node_modules/*"],
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
+    }
   },
   "include": ["src", "**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

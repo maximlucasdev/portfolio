@@ -35,6 +35,7 @@
     "app.aboutwebsite.content.p6": "This is hosted on",
 
     "app.github.content.title": "Looking to see some of my work?",
+    "app.github.content.subtitle": "I don't have that much public repositories, but it's where you will find experimental work (and this portfolio!).",
 
     "app.myprojects.content.title": "Projects",
     "app.myprojects.content.subtitle": "Here you can find stuff that I've worked on.",
@@ -55,5 +56,7 @@
     "taskbar.settings.connected": "Connected",
 
     "actionbuttons.srccode": "Source code",
-    "actionbuttons.reset": "Reset"
+    "actionbuttons.reset": "Reset",
+
+    "looksbetteronpc": "The portfolio also has a PC version!"
 }

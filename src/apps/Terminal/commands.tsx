@@ -68,7 +68,7 @@ export const commands = [
                 ⠀⠀⠀⠀'"'⠀⠀⠀'"'<br/>
                 </p>
                 <p className="text-gray-300 w-1/2">
-                    <span className="gradient-text">OS:</span> PepsiOS 1.0.0 x64<br/>
+                    <span className="gradient-text">OS:</span> PepsiOS 1.1.2 x64<br/>
                     <span className="gradient-text">Host:</span> xshadow<br/>
                     <span className="gradient-text">Uptime:</span> {uptime}<br/>
                     <span className="gradient-text">Resolution:</span> {window.innerWidth}x{window.innerHeight}<br/>
