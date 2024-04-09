@@ -11,6 +11,10 @@ export function openApp(app:App) {
   // @ts-ignore
   openedWindows.value = [...openedWindows.value, apps.indexOf(app)];
   activeWindow.value = apps.indexOf(app);
+
+  // Umami
+  // @ts-ignore
+  umami.track(`Open ${app.name}`);
 }
 
 export default function AppsWindowsManager() {
