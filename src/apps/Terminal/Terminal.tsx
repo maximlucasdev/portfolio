@@ -55,6 +55,9 @@ export default function Terminal() {
                           setInputData('');
                         }
                         setTimeout(() => document.getElementById(termId).scrollTop = document.getElementById(termId).scrollHeight, 100);
+                        // Umami
+                        // @ts-ignore
+                        umami.track(`Execute terminal command ${inputData}`);
                         break;
                       case 38:
                         if (!inputHistory[historyCursor-1]) break;
