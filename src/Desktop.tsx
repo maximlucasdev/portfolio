@@ -35,6 +35,11 @@ export default function Desktop() {
 
     useEffect(() => {
         handleResize();
+
+        // umami domain metrics (ts-ignore as umami will be defined when loaded)
+        // @ts-ignore
+        umami.track(`Domain: ${window.location.hostname}`)
+
         window.addEventListener("resize", handleResize)
         return () => {
           window.removeEventListener("resize", handleResize)
@@ -53,6 +58,7 @@ export default function Desktop() {
             setShowWelcome(true)
           }, 1000);
         }
+        
     }, [wpReady, noOs.value]);
     useEffect(() => {
       setAppFullScreen(isAppFullscreen.value);
