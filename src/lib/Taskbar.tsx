@@ -14,7 +14,9 @@ export default function Taskbar() {
         }
     }, [activeWindow.value, isAppFullscreen.value]);
     useEffect(() => {
-        activeWindow.value = -1;
+        setTimeout(() => {
+            activeWindow.value = -1;
+        }, 100);
     }, []);
   return (
     <Animated animationIn={"slideInUp"} animationOut={"slideOutDown"} isVisible={visible}>
