@@ -19,17 +19,20 @@ import {
    mdiTailwind,
    mdiWeb,
    mdiLightningBolt,
-   mdiOwl
+   mdiOwl,
+   mdiLanguageGo
 } from '@mdi/js';
 
 const languages: Skill[] = [
-  {name:"Python",mdi:mdiLanguagePython, stars:4},
   {name:"JavaScript",mdi:mdiLanguageJavascript, stars:5},
-  {name:"TypeScript",mdi:mdiLanguageTypescript, stars:4},
-  {name:"HTML & CSS",mdi:mdiLanguageHtml5, stars:3},
+  {name:"TypeScript",mdi:mdiLanguageTypescript, stars:5},
+  {name:"Python",mdi:mdiLanguagePython, stars:4},
   {name:"VB.net 👴",mdi:mdiDotNet, stars:4},
+  {name:"HTML & CSS",mdi:mdiLanguageHtml5, stars:3},
+
   {name:"C#",mdi:mdiDotNet, stars:3},
-  {name:"PHP",mdi:mdiLanguagePhp, stars:3}
+  {name:"Go",mdi:mdiLanguageGo, stars:3},
+  {name:"PHP",mdi:mdiLanguagePhp, stars:2},
 ]
 
 const frameworks: Skill[] = [
@@ -45,6 +48,7 @@ const frameworks: Skill[] = [
   {name:"Tailwind CSS",mdi:mdiTailwind, stars:5},
   {name:"Preact",mdi:mdiReact, stars:4},
   {name:"Vite",mdi:mdiLightningBolt, stars:4},
+  {name:"Echo (Go)",mdi:mdiWeb, stars:3},
 ]
 
 const db: Skill[] = [
@@ -63,7 +67,20 @@ const tools: Skill[] = [
 
 const projects: Project[] = [
     {
-      title: "Shadow's Dash (2024)",
+      title: "PepsiTube (2022-...)",
+      subtitleEN: "FullStack website to download YouTube videos without ads or pop-ups. First project in Go!",
+      subtitleFR: "Site Web FullStack pour télécharger des vidéos YouTube (ou autre) sans publicité ni pop-ups. Premier projet en Go !",
+      descriptionEN:
+          "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups. Remade it in November 2023 because I wasn't satisified with the frontend.",
+      descriptionFR:
+          "Un téléchargeur de vidéos YouTube facile et rapide alimenté par une API yt-dlp. Pas de publicité, pas de pop-up. Refait en novembre 2023 car je n'étais pas satisfait du frontend.",
+      image: "/projets/pepsitube.webp",
+      link: "https://tube.xshadow.xyz",
+      skillsName: ["Go", "Preact", "TailwindCSS", "Vite"]
+
+    },
+    {
+      title: "Shadow's Dash (2023-...)",
       subtitleEN: "Full Stack web fully featured modern client panel for Pterodactyl-based hosts",
       subtitleFR: "Appli web full stack, panel client complet et moderne pour les hébergeurs basés sur Pterodactyl",
       descriptionEN:
@@ -109,7 +126,7 @@ const projects: Project[] = [
         skillsName: ["Preact", "TailwindCSS", "Vite"]
     },
     {
-      title: "OptikServers.com (2023)",
+      title: "OptikServers.com (2021-...)",
       subtitleEN: "Free hosting services for Minecraft servers, Discord bots and more. Since 2021.",
       subtitleFR: "Services d'hébergement gratuits pour les serveurs Minecraft, les bots Discord et plus encore. Depuis 2021.",
       descriptionEN:
@@ -121,7 +138,7 @@ const projects: Project[] = [
       skillsName: ["Preact", "TailwindCSS", "Vite", "System administration"]
     },
     {
-      title: "HostApp (2023)",
+      title: "HostApp (2022-...)",
       subtitleEN: "FullStack app for Pterodactyl-based hosts",
       subtitleFR: "Application FullStack pour les hébergeurs basés sur Pterodactyl",
       descriptionEN:
@@ -133,22 +150,9 @@ const projects: Project[] = [
       skillsName: ["React Native Expo", "Svelte", "Hapi", "Node.js", "TailwindCSS", "Pocketbase", "Vite"]
     },
     {
-      title: "PepsiTube (2022-2023)",
-      subtitleEN: "FullStack website to download YouTube videos without ads or pop-ups.",
-      subtitleFR: "Site Web FullStack pour télécharger des vidéos YouTube (ou autre) sans publicité ni pop-up.",
-      descriptionEN:
-          "An easy and fast YouTube video downloader powered by a yt-dlp API backend. No ads, no pop-ups. Remade it in November 2023 because I wasn't satisified with the frontend.",
-      descriptionFR:
-          "Un téléchargeur de vidéos YouTube facile et rapide alimenté par une API yt-dlp. Pas de publicité, pas de pop-up. Refait en novembre 2023 car je n'étais pas satisfait du frontend.",
-      image: "/projets/pepsitube.webp",
-      link: "https://tube.xshadow.xyz",
-      skillsName: ["Preact", "Hapi", "Node.js", "TailwindCSS", "Vite"]
-
-    },
-    {
-      title: "Wolfer (2022)",
-      subtitleEN: "Mobile online werewolf game.",
-      subtitleFR: "Jeu de loup-garou en ligne.",
+      title: "Wolfer (2019-2022)",
+      subtitleEN: "Mobile online werewolf game from scratch (socketio server, backend, website, mobile app).",
+      subtitleFR: "Jeu de loup-garou en ligne sur mobile de zéro (serveur socketio, backend, site web, application mobile).",
       descriptionEN:
         "Wolfer is an adapation of the famous card game, ''The werewolves of Millers Hollow''. It is a multiplayer game where players try to eliminate their enemy, according to their cards. The game is played on a mobile device, and will be available on both iOS and Android.",
       descriptionFR:
@@ -156,9 +160,8 @@ const projects: Project[] = [
       image: "/projets/wolfer.webp",
       skillsName: ["React", "React Native Expo", "Hapi", "Node.js", "Redis", "MySQL", "TailwindCSS", "Socket.io", "Vite"]
     },
-    
     {
-      title: "QuackHost.uk (2020)",
+      title: "QuackHost.uk (2020-2021)",
       subtitleEN: "Client panel for pterodactyl-based hosts. First big project! (PHP)",
       subtitleFR: "Panneau client pour les hébergeurs basés sur Pterodactyl. Premier gros projet ! (PHP)",
       descriptionEN:
