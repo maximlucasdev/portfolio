@@ -12,7 +12,7 @@ export default function PhoneStatusBar() {
         return () => clearInterval(interval);
     }, []);
   return (
-    <div class={`flex justify-between items-center px-5 py-5 transition ${activeWindow.value !== -1 ? 'bg-blue-900' : 'bg-transparent'} fixed top-0 h-7 w-full text-white text-sm`}>
+    <div class={`flex justify-between items-center px-5 py-5 transition bg-transparent fixed top-0 h-7 w-full text-white text-sm`}>
         <div>
             <p class='font-bold'>{time}</p>
         </div>
