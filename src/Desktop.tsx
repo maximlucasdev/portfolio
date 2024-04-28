@@ -37,8 +37,12 @@ export default function Desktop() {
         handleResize();
 
         // umami domain metrics (ts-ignore as umami will be defined when loaded)
-        // @ts-ignore
-        umami.track(`Domain: ${window.location.hostname}`)
+        try {
+          // @ts-ignore
+          umami.track(`Domain: ${window.location.hostname}`)
+        } catch (error) {
+          
+        }
 
         window.addEventListener("resize", handleResize)
         return () => {
