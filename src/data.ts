@@ -20,7 +20,11 @@ import {
    mdiWeb,
    mdiLightningBolt,
    mdiOwl,
-   mdiLanguageGo
+   mdiLanguageGo,
+   mdiAbacus,
+   mdiFile,
+   mdiGamepad,
+   mdiLock
 } from '@mdi/js';
 
 const languages: Skill[] = [
@@ -49,10 +53,13 @@ const frameworks: Skill[] = [
   {name:"Preact",mdi:mdiReact, stars:4},
   {name:"Vite",mdi:mdiLightningBolt, stars:4},
   {name:"Echo (Go)",mdi:mdiWeb, stars:3},
+  {name:"Axios", mdi:mdiAbacus, stars: 4},
+
 ]
 
 const db: Skill[] = [
   {name:"MySQL", mdi:mdiDatabase, stars:4},
+  {name:"MariaDB", mdi:mdiDatabase, stars: 4},
   {name:"Redis", mdi:mdiDatabase, stars:4},
   {name:"MongoDB", mdi:mdiDatabase, stars:5},
   {name:"PocketBase", mdi:mdiDatabase, stars:2},
@@ -62,7 +69,11 @@ const tools: Skill[] = [
   {name:"Visual Studio 2022", mdi:mdiMicrosoftVisualStudio},
   {name:"Visual Studio Code", mdi:mdiMicrosoftVisualStudioCode},
   {name:"GitHub", mdi:mdiGithub},
-  {name:"Docker", mdi:mdiDocker}
+  {name:"Docker", mdi:mdiDocker},
+  {name:"Pterodactyl", mdi:mdiGamepad},
+  {name:"MinIO Object Store", mdi:mdiFile},
+  {name:"Caddy", mdi:mdiLock},
+  {name:"Nginx", mdi:mdiWeb}
 ]
 
 const projects: Project[] = [

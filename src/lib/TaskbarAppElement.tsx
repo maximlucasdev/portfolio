@@ -17,7 +17,7 @@ export default function TaskbarAppElement(props:{app:App}) {
             <p class='invisible group-hover:visible absolute m-auto left-0 right-0 text-white text-xs p-2 w-max  bg-white/5 rounded-md -translate-y-10'>{apps[apps.indexOf(props.app)].name}</p>
             <img class='w-12 h-12' src={props.app.icon}/>
           </div>
-          <div class={`w-3 h-1 bg-white/80 rounded-full ${openedWindows.value.includes(apps.indexOf(props.app) as never) ? 'block' : 'hidden'} transition`}/>
+          <div class={`w-3 h-1 bg-white/80 rounded-full ${openedWindows.value.includes(apps.indexOf(props.app) as never) ? 'block' : 'hidden'} transition-[display]`}/>
       </button>
     </Animated>
   )

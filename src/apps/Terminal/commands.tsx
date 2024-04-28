@@ -2,6 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 import { openApp } from "../../lib/AppsWindowsManager";
 import apps from "../Apps";
 import { noOs, pepsimode } from "../../Signals";
+import Spinner from "./Spinner";
 
 
 export const commands = [
@@ -31,7 +32,7 @@ export const commands = [
                     setPic(data.url);
                 }) 
             }, []);
-            if (pic === '') return <p className="animate-pulse">Loading...</p>
+            if (pic === '') return <p><Spinner/> Fetching a new Pepsi picture...</p>
             return <><img src={pic} alt="pepsi" onLoad={() => props.scroll()}/><p>🐈 Pepsi Mode {pepsimode.value ? 'enabled' : 'disabled'}. Meow!</p></>
         }
     }, 
@@ -119,15 +120,15 @@ export const commands = [
     {
         name: 'thisyou',
         Response: (props:{scroll:() => {}}) => {
-            interface Ip {city: string, region: string, country_name: string, ip: string}
-            const [ip, setIp] = useState<Ip>({city:'unknown', region:'unknown', country_name:'unknown', ip:'unknown'});
+            interface Ip {city: string|null, region: string, country_name: string, ip: string}
+            const [ip, setIp] = useState<Ip>({city: null, region:'unknown', country_name:'unknown', ip:'unknown'});
             useEffect(() => {
                 fetch('https://ipapi.co/json/').then(res => res.json()).then(data => {
                     setIp(data);
                     props.scroll();
                 })
             }, []);
-            if (!ip.city) return <p className="animate-pulse">Loading...</p>
+            if (!ip.city) return <p><Spinner/> Loading...</p>
             return <p>hey yo {ip.city} ({ip.region}), {ip.country_name} {ip.ip} remind u of something?</p>
         }
     },

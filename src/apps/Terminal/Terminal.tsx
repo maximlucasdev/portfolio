@@ -3,6 +3,7 @@ import { autocomplete, commands } from './commands';
 import { useState, useId } from "preact/hooks";
 
 import '../../style/index.css';
+import Spinner from './Spinner';
 export default function Terminal() {
     const termId = useId();
     const termInputId = useId();

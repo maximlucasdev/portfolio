@@ -13,11 +13,6 @@ export default function Taskbar() {
             setVisible(true);
         }
     }, [activeWindow.value, isAppFullscreen.value]);
-    useEffect(() => {
-        setTimeout(() => {
-            activeWindow.value = -1;
-        }, 100);
-    }, []);
   return (
     <Animated animationIn={"slideInUp"} animationOut={"slideOutDown"} isVisible={visible}>
         <div class='md:p-5 w-full flex items-center justify-center'>
