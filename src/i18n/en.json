@@ -15,11 +15,13 @@
     "app.projects": "Projects",
     "app.skills": "Skills",
     "app.terminal": "Terminal",
+    "app.email": "Contact me",
 
     "app.skills.title": "Coding skills",
     "app.github.title": "Github profile",
     "app.os.customize.title": "Change wallpaper",
     "app.os.about.title": "About",
+    "app.email.title": "Send me an email!",
 
     "app.aboutme.content.title": "I'm Maxim.",
     "app.aboutme.content.subtitle": "A french developer.",
@@ -36,6 +38,9 @@
 
     "app.github.content.title": "Looking to see some of my work?",
     "app.github.content.subtitle": "I don't have that much public repositories, but it's where you will find experimental work (and this portfolio!).",
+
+    "app.email.content.title": "Do you have a project in mind? A question?",
+    "app.email.content.subtitle": "Send me an email!",
 
     "app.myprojects.content.title": "Projects",
     "app.myprojects.content.subtitle": "Here you can find stuff that I've worked on.",

@@ -10,6 +10,7 @@ const Pepsi = lazy(() => import("./PepsiTheCat/Pepsi"));
 const SkillsMain = lazy(() => import("./Skills/SkillsMain"));
 const Terminal = lazy(() => import("./Terminal/Terminal"));
 const AboutMe = lazy(() => import("./AboutMe/AboutMe"));
+const EmailApp = lazy(() => import("./Email/EmailWindow"));
 
 const apps: App[] = [
     {
@@ -97,6 +98,20 @@ const apps: App[] = [
         },
         icon: '/apps/pepsifolder.png',
         component: () => <Suspense fallback={<LoadingApp/>}><Pepsi/></Suspense>
+    },
+    {
+        name: t('app.email'),
+        window: {
+            width: 600,
+            height: 500,
+            resizable: true,
+            maximizable: true,
+            minimizable: true,
+            fullscreenable: true,
+            title: t('app.email.title')
+        },
+        icon: '/apps/email.png',
+        component: () => <Suspense fallback={<LoadingApp/>}><EmailApp/></Suspense>
     },
     {
         name: 'Visual Studio Code',
