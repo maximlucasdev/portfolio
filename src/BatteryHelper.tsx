@@ -50,22 +50,26 @@ export default function BatteryHelper() {
     batterySignal.value = {charging: battery.charging, level: battery.level*100, chargingTime: battery.chargingTime, dischargingTime: battery.dischargingTime};
   }
     useEffect(() => {
-      // @ts-ignore
-      navigator.getBattery().then((battery: any) => {
-        updateAllBatteryInfo(battery);
-        battery.addEventListener("chargingchange", () => updateAllBatteryInfo(battery));
-        battery.addEventListener("levelchange", () => updateAllBatteryInfo(battery));
-        battery.addEventListener("chargingtimechange", () => updateAllBatteryInfo(battery));
-        battery.addEventListener("dischargingtimechange", () => updateAllBatteryInfo(battery));
-      });
-      return () => {
+      try {
         // @ts-ignore
         navigator.getBattery().then((battery: any) => {
-          battery.removeEventListener("chargingchange", () => updateAllBatteryInfo(battery));
-          battery.removeEventListener("levelchange", () => updateAllBatteryInfo(battery));
-          battery.removeEventListener("chargingtimechange", () => updateAllBatteryInfo(battery));
-          battery.removeEventListener("dischargingtimechange", () => updateAllBatteryInfo(battery));
+          updateAllBatteryInfo(battery);
+          battery.addEventListener("chargingchange", () => updateAllBatteryInfo(battery));
+          battery.addEventListener("levelchange", () => updateAllBatteryInfo(battery));
+          battery.addEventListener("chargingtimechange", () => updateAllBatteryInfo(battery));
+          battery.addEventListener("dischargingtimechange", () => updateAllBatteryInfo(battery));
         });
+        return () => {
+          // @ts-ignore
+          navigator.getBattery().then((battery: any) => {
+            battery.removeEventListener("chargingchange", () => updateAllBatteryInfo(battery));
+            battery.removeEventListener("levelchange", () => updateAllBatteryInfo(battery));
+            battery.removeEventListener("chargingtimechange", () => updateAllBatteryInfo(battery));
+            battery.removeEventListener("dischargingtimechange", () => updateAllBatteryInfo(battery));
+          });
+        }
+      } catch (error: any) {
+        console.log("Could not load the navigator battery api (probably because on firefox)");
       }
     }, []);
   return (<></>)
