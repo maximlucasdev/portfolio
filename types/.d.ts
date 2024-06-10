@@ -34,6 +34,7 @@ interface Project {
     descriptionFR: string,
     image: string,
     link?: string,
+    executable?: string,
     skillsName?: string[],
 }
 

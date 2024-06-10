@@ -1,5 +1,7 @@
+import Icon from "@mdi/react";
 import { language } from "../../../Signals";
 import t from "../../../i18n/i18n";
+import { mdiRun } from "@mdi/js";
 
 export default function ProjectCard(props:{project:Project,setViewProject:any}) {
   return (
@@ -17,6 +19,7 @@ export default function ProjectCard(props:{project:Project,setViewProject:any}) 
               {props.project.skillsName ? props.project.skillsName.map((skill) => {
                   return <span class='text-xs bg-white/10 rounded-md p-1 m-1'>{skill}</span>
               }) : <></>}
+              {props.project.executable ? <span class='text-xs bg-blue-500/50 border-2 border-blue-500 rounded-md p-1 m-1'>✨ Portfolio App</span> : <></>}
             </div>
         </div>
         

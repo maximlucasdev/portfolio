@@ -25,7 +25,7 @@ export default function Terminal() {
             <div className='font-mono w-full h-full md:h-96 p-3 text-white overflow-y-scroll noscrollbar' style={{height: window.innerWidth < 768 ? window.innerHeight-100 : 385}} id={termId}>
               <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PortfoliOS 1.1.2 (x64)</span><br/><br/>
                 * Website:  https://xshadow.xyz | https://maximlucas.dev<br/>
-                * Support:  hello@xshadow.xyz
+                * Support:  contact@xshadow.xyz
                 </p>
               <p className='text-white/50 text-xs'>(i) Type "help" to start! To type commands, click on "help" below. It's the input box!</p>
               {history.map((value) => {

@@ -11,6 +11,7 @@ const SkillsMain = lazy(() => import("./Skills/SkillsMain"));
 const Terminal = lazy(() => import("./Terminal/Terminal"));
 const AboutMe = lazy(() => import("./AboutMe/AboutMe"));
 const EmailApp = lazy(() => import("./Email/EmailWindow"));
+const FishSim = lazy(() => import("./fishsim/Fishsim"));
 
 const apps: App[] = [
     {
@@ -31,7 +32,7 @@ const apps: App[] = [
     {
         name: t('app.projects'),
         window: {
-            width: 900,
+            width: 1000,
             height: 600,
             resizable: true,
             maximizable: true,
@@ -127,6 +128,22 @@ const apps: App[] = [
         },
         icon: '/apps/vscode.svg',
         component: () => <Suspense fallback={<LoadingApp/>}><Vscode/></Suspense>
+    },
+    {
+        name: 'fishsim',
+        window: {
+            width: 1450,
+            height: 800,
+            resizable: true,
+            maximizable: true,
+            minimizable: false,
+            fillTitlebar: true,
+            fullscreenable: true,
+            title: 'FishSim',
+        },
+        hide: true,
+        icon: '/apps/fishsim.png',
+        component: () => <Suspense fallback={<LoadingApp/>}><FishSim/></Suspense>
     },
 
 

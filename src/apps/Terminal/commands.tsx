@@ -15,6 +15,7 @@ export const commands = [
                 <p>• help <span className='text-gray-400'>- Get a list of commands</span></p>
                 <p>• pepsi <span className='text-gray-400'>- Get a random pepsi image</span></p>
                 <p>• neofetch <span className='text-gray-400'>- Get my main PC specs</span></p>
+                <p>• htop <span className='text-gray-400'>- Show a fake htop</span></p>
                 <p>• baguette <span className='text-gray-400'>- baget</span></p>
                 <p>• thisyou <span className='text-gray-400'>- Remind you of something?</span></p>
                 <p>• clear <span className='text-gray-400'>- Clear command history</span></p>
@@ -78,6 +79,56 @@ export const commands = [
                     <span className="gradient-text">Memory:</span> 31864MB DDR5<br/>
                 </p>
             </div>
+        }
+    },
+    {
+        name: 'htop',
+        Response: (props:{scroll:() => {}}) => {
+            const [cpus, setCpus] = useState([...Array(10).keys()]);
+            const POSSIBLE_PROCESSES = [
+                {user: 'pepsi', command: './catto-downloader'},
+                {user: 'pepsi', command: './infinite-treats-generator'},
+                {user: 'bartosz1', command: './polish-cow'},
+                {user: 'bartosz1', command: './intellij-idea --project=bmonitord'},
+            ]
+
+            const [process, setProcess] = useState(POSSIBLE_PROCESSES[0]);
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setCpus([...Array(10).keys()].map(() => Math.floor(Math.random() * 100)));
+                    setProcess(POSSIBLE_PROCESSES[Math.floor(Math.random() * POSSIBLE_PROCESSES.length)]);
+                }, 2000);
+                return () => clearInterval(interval);
+            }, []);
+            return <>
+                <div class='grid grid-cols-1 md:grid-cols-2'>
+                    {cpus.map((percentage, index) => {
+                        return <p class='gradient-text'>{index}[{'|'.repeat(Math.floor(percentage*20/100))}<span class='invisible'>{'|'.repeat(20 - Math.floor(percentage*20/100))}</span>{percentage < 10 ? ' ' : ''}{percentage}%]</p>
+                    })}
+                </div>
+                <div class='flex flex-col'>
+                    <p class='gradient-text'>Mem[|||<span class='invisible'>|||||||||||||||||</span>6G/32G]</p>
+                    <p class='gradient-text'>Swp[<span class='invisible'>|||||||||||||||||||||</span>0K/2G]</p>
+                </div>
+                <div class='flex gap-2 h-5 text-black mt-3'>
+                    <div class='px-2 bg-orange-500'><p>Main</p></div>
+                    <div class='px-2 bg-orange-500 opacity-50'><p>I/O</p></div>
+                </div>
+                <div class='px-2 grid grid-cols-12 gap-2 bg-orange-500 text-black  text-sm md:text-base'>
+                    <p>PID</p>
+                    <p class='col-span-2'>USER</p>
+                    <p>CPU%</p>
+                    <p>MEM%</p>
+                    <p class='col-span-7'>Command</p>
+                </div>
+                <div class='px-2 grid grid-cols-12 gap-2 text-white text-xs md:text-sm'>
+                    <p>1</p>
+                    <p class='col-span-2'>{process.user}</p>
+                    <p>{(cpus.reduce((a, b) => a + b, 0) / cpus.length).toFixed(1)}</p>
+                    <p>0.1</p>
+                    <p class='col-span-7'>{process.command}</p>
+                </div>
+            </>
         }
     },
     {

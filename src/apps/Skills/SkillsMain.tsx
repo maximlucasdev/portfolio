@@ -12,7 +12,7 @@ export default function SkillsMain() {
     <div class='h-full w-full md:rounded-b-md'>
         <div class='p-10 gap-5 text-center text-white w-full flex flex-col pt-20 items-center justify-center'>
             <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true} animationInDuration={1000}>
-                <h1 class='text-4xl font-bold wavy-underline'>{t("app.skills.content.title")}</h1>
+                <h1 class='text-4xl font-bold wavy-underline'>{t("app.skills.content.title")} 🧑‍💻</h1>
             </Animated>
 
             <div class='flex flex-row gap-4 flex-wrap justify-center mb-5 mt-3'>

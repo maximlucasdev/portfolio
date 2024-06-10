@@ -104,6 +104,7 @@ const projects: Project[] = [
     },
     {
       title: "FishSim 🐠 (2023)",
+      executable: "fishsim",
       subtitleEN: "French only: A project simulating fish and genetic evolution for a school project.",
       subtitleFR: "Un simulateur de poisson et d'évolution génétique pour un projet de NSI",
       descriptionEN:
