@@ -1,5 +1,4 @@
 import { useState } from "react"
-import t from "../../i18n/i18n";
 import Spinner from "../Terminal/Spinner";
 import { Animated } from "react-animated-css";
 

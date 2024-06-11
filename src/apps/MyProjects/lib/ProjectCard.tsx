@@ -1,7 +1,5 @@
-import Icon from "@mdi/react";
 import { language } from "../../../Signals";
 import t from "../../../i18n/i18n";
-import { mdiRun } from "@mdi/js";
 
 export default function ProjectCard(props:{project:Project,setViewProject:any}) {
   return (

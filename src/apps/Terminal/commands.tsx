@@ -83,7 +83,7 @@ export const commands = [
     },
     {
         name: 'htop',
-        Response: (props:{scroll:() => {}}) => {
+        Response: () => {
             const [cpus, setCpus] = useState([...Array(10).keys()]);
             const POSSIBLE_PROCESSES = [
                 {user: 'pepsi', command: './catto-downloader'},

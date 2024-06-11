@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { batteryIconFromLevel } from '../BatteryHelper';
 import Icon from '@mdi/react';
-import { activeWindow, batterySignal } from '../Signals';
+import { batterySignal } from '../Signals';
 
 export default function PhoneStatusBar() {
     const [time, setTime] = useState(new Date().toLocaleTimeString());

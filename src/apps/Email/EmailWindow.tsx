@@ -1,4 +1,3 @@
-import { language } from "../../Signals";
 import t from "../../i18n/i18n";
 
 export default function EmailWindow() {

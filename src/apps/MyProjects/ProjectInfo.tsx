@@ -1,4 +1,4 @@
-import { mdiArrowLeft, mdiOpenInNew } from "@mdi/js"
+import { mdiArrowLeft } from "@mdi/js"
 import Icon from "@mdi/react"
 import t from "../../i18n/i18n"
 import { language } from "../../Signals"
