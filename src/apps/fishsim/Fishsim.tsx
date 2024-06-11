@@ -42,7 +42,7 @@ export default function Fishsim() {
           </button>}
         </div>
       </Animated>
-      <iframe src="https://rare-screw.surge.sh" scrolling="no" height="100%" width="100%" onLoad={() => {
+      <iframe src="https://fishsim.pages.dev" scrolling="no" height="100%" width="100%" onLoad={() => {
         setTimeout(() => {
           setLoaded(true); // added a timeout to make sure the pygame finished loading
         }, 3000);
