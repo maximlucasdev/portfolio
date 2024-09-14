@@ -78,6 +78,16 @@ const tools: Skill[] = [
 
 const projects: Project[] = [
     {
+      title: "PicsFiesta (2024-...)",
+      descriptionEN: "A social network developed from scratch using React Native, Bun, and Elysia. Every day, users receive a picture challenge, friends can comment, react and more! Available on the Google Play Store (France), and on picsfiesta.com (French only).",
+      descriptionFR: "Un réseau social développé de zéro utilisant React Native, Bun, et Elysia. Chaque jour, les utilisateurs reçoivent un défi photo, les amis peuvent commenter, réagir et plus encore ! Disponible sur le Google Play Store (France), et sur picsfiesta.com.",
+      subtitleEN: "Social network with daily photo challenges",
+      subtitleFR: "Réseau social avec défis photo quotidiens",
+      image: "/projets/picsfiesta.webp",
+      link: "https://picsfiesta.com",
+      skillsName: ["React Native Expo", "BunJS", "Elysia", "TypeScript", "TailwindCSS", "MariaDB"]
+    },
+    {
       title: "PepsiTube (2022-...)",
       subtitleEN: "FullStack website to download YouTube videos without ads or pop-ups. First project in Go!",
       subtitleFR: "Site Web FullStack pour télécharger des vidéos YouTube (ou autre) sans publicité ni pop-ups. Premier projet en Go !",
