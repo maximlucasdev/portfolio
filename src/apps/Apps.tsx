@@ -115,21 +115,6 @@ const apps: App[] = [
         component: () => <Suspense fallback={<LoadingApp/>}><EmailApp/></Suspense>
     },
     {
-        name: 'Visual Studio Code',
-        window: {
-            width: 1000,
-            height: 800,
-            resizable: true,
-            maximizable: true,
-            minimizable: true,
-            fillTitlebar: true,
-            fullscreenable: true,
-            title: 'Visual Studio Code'
-        },
-        icon: '/apps/vscode.svg',
-        component: () => <Suspense fallback={<LoadingApp/>}><Vscode/></Suspense>
-    },
-    {
         name: 'fishsim',
         window: {
             width: 1450,

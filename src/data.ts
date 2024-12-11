@@ -88,6 +88,19 @@ const projects: Project[] = [
       skillsName: ["React Native Expo", "BunJS", "Elysia", "TypeScript", "TailwindCSS", "MariaDB"]
     },
     {
+      title: "FishSim 🐠 (2024)",
+      executable: "fishsim",
+      subtitleEN: "French only: A project simulating fish and genetic evolution for a school project.",
+      subtitleFR: "Un simulateur de poisson et d'évolution génétique pour un projet de NSI.",
+      descriptionEN:
+          "FRENCH PROJECT | FishSim is a fish simulator, simulating their life, but also death, reproduction, food etc... This project carrying out random genetic mutations, it allows us to see natural selection (the fish which go the fastest will eat more, therefore will survive more, therefore will reproduce the most etc...)",
+      descriptionFR:
+          "FishSim est un simulateur de poisson, simulant leur vie, mais aussi la mort, la reproduction, la nourriture etc... Ce projet réalisant des mutations génétiques aléatoires, il nous permet de voir la séléction naturelle (les poissons qui vont le plus vite mangeront plus, donc surviveront plus, donc se reproduiront le plus etc...)",
+      image: "/projets/fishsim.webp",
+      link: "https://github.com/shadowdevfr/fishsim",
+      skillsName: ["Go", "EbitenEngine"]
+    },
+    {
       title: "PepsiTube (2022-...)",
       subtitleEN: "FullStack website to download YouTube videos without ads or pop-ups. First project in Go!",
       subtitleFR: "Site Web FullStack pour télécharger des vidéos YouTube (ou autre) sans publicité ni pop-ups. Premier projet en Go !",
@@ -113,19 +126,6 @@ const projects: Project[] = [
       skillsName: ["Svelte", "Elysia", "TypeScript", "BunJS", "TailwindCSS", "MongoDB", "Vite"]
     },
     {
-      title: "FishSim 🐠 (2023)",
-      executable: "fishsim",
-      subtitleEN: "French only: A project simulating fish and genetic evolution for a school project.",
-      subtitleFR: "Un simulateur de poisson et d'évolution génétique pour un projet de NSI",
-      descriptionEN:
-          "FRENCH PROJECT | FishSim is a fish simulator, simulating their life, but also death, reproduction, food etc... This project carrying out random genetic mutations, it allows us to see natural selection (the fish which go the fastest will eat more, therefore will survive more, therefore will reproduce the most etc...)",
-      descriptionFR:
-          "FishSim est un simulateur de poisson, simulant leur vie, mais aussi la mort, la reproduction, la nourriture etc... Ce projet réalisant des mutations génétiques aléatoires, il nous permet de voir la séléction naturelle (les poissons qui vont le plus vite mangeront plus, donc surviveront plus, donc se reproduiront le plus etc...)",
-      image: "/projets/fishsim.webp",
-      link: "https://github.com/shadowdevfr/fishsim",
-      skillsName: ["Python", "PyGame"]
-    },
-    {
       title: "SudokuSolver (2023)",
       subtitleEN: "French only: A web recursive sudoku solver using backtracking.",
       subtitleFR: "Un résolveur de sudoku web récursif utilisant le backtracking.",
@@ -148,7 +148,7 @@ const projects: Project[] = [
         skillsName: ["Preact", "TailwindCSS", "Vite"]
     },
     {
-      title: "OptikServers.com (2021-...)",
+      title: "OptikServers.com (2021-2024)",
       subtitleEN: "Free hosting services for Minecraft servers, Discord bots and more. Since 2021.",
       subtitleFR: "Services d'hébergement gratuits pour les serveurs Minecraft, les bots Discord et plus encore. Depuis 2021.",
       descriptionEN:
@@ -160,7 +160,7 @@ const projects: Project[] = [
       skillsName: ["Preact", "TailwindCSS", "Vite", "System administration"]
     },
     {
-      title: "HostApp (2022-...)",
+      title: "HostApp (2022-2024)",
       subtitleEN: "FullStack app for Pterodactyl-based hosts",
       subtitleFR: "Application FullStack pour les hébergeurs basés sur Pterodactyl",
       descriptionEN:
