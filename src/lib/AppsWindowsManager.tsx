@@ -10,7 +10,11 @@ export function openApp(app:App) {
   };
   // @ts-ignore
   openedWindows.value = [...openedWindows.value, apps.indexOf(app)];
-  activeWindow.value = apps.indexOf(app);
+  setTimeout(() => {activeWindow.value = apps.indexOf(app);}, 0); // Without setTimeout, the window was not gaining focus, because the interaction on some windows caused a refocus
+
+  // Umami
+  // @ts-ignore
+  umami.track(`Open ${app.name}`);
 }
 
 export default function AppsWindowsManager() {

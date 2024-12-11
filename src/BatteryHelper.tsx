@@ -28,6 +28,7 @@ export const batteryIconFromLevel = (level: number, charging: boolean) => {
     else if (level <= 90) return mdiBattery90;
     else if (level <= 100) return mdiBattery;
   }
+  return ""
 }
 
 export const fromSeconds = (seconds:number) => {

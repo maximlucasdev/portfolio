@@ -15,6 +15,7 @@ import('./style/animate.min.css');
 const DesktopAppIcon = lazy(() => import("./lib/DesktopAppIcon"));
 export default function Desktop() {
     const [showWelcome, setShowWelcome] = useState(false);
+    const [bootmsg, setBootmsg] = useState("Loading assets");
     const [wpReady, setWpReady] = useState(false);
     const [showNoOs, setShowNoOs] = useState(false);
     const { refs, floatingStyles } = useFloating({placement: 'top'});
@@ -40,9 +41,21 @@ export default function Desktop() {
 
     useEffect(() => {
         // Preload wallpaper
-        const img = new Image()
-        img.src = `/wallpapers/${wallpaper.value}`;
-        img.onload = () => setWpReady(true)
+        const images: string[] = [`/wallpapers/${wallpaper.value}`, "buttons/close.svg", "buttons/close-active.svg", "buttons/close-hover.svg", "buttons/maximize.svg", "buttons/maximize-active.svg", "buttons/maximize-hover.svg", "buttons/minimize-active.svg", "buttons/minimize-hover.svg", "startbtn/click.webp", "startbtn/hover.webp", "startbtn/normal.webp", "taskbar/focus.png", "taskbar/hover.png", "taskbar/idle.png", "taskbar/active.png"]
+        let imgcount = 0;
+        for (let i = 0; i < images.length; i++) {
+          const start = new Date().getTime();
+          const img = new Image()
+          img.src = images[i];
+          img.onload = () => {
+            console.log(images[i], imgcount, images.length, "loaded in", new Date().getTime()-start, "ms")
+            imgcount++
+            setBootmsg(`Loading assets (${imgcount}/${images.length})... - Loaded ${images[i]} (${new Date().getTime()-start}ms)`)
+            if (imgcount == images.length) {
+              setWpReady(true)
+            }
+          }
+        }
         setShowNoOs(noOs.value);
         if (wpReady) {
           setTimeout(async () => {
@@ -57,7 +70,7 @@ export default function Desktop() {
     return (
       <>
       
-        {!wpReady ? <BootScreen status={2}/> : <></>}
+        {!wpReady ? <BootScreen status={2} text={bootmsg}/> : <></>}
         {showNoOs ? <NoOperatingSystem/> : <></>}
         {isMobile ? <PhoneStatusBar/>: <></>}
         {showContextMenu ? <Suspense fallback={<></>}><DesktopContextMenu x={pointerPosition.x} y={pointerPosition.y} hide={() => setShowContextMenu(false)} /></Suspense> : null}
@@ -92,6 +105,7 @@ export default function Desktop() {
                   return <Suspense fallback={<></>}><DesktopAppIcon app={app} /></Suspense>
                 })}
             </div>
+            {/* @ts-ignore */}
             {showWelcome ? (<div ref={refs.setFloating} style={floatingStyles} class="z-50"><WelcomePopup hide={() => {setShowWelcome(false)}} isMobile={isMobile}/></div>) : null}
             {/* @ts-ignore */}
             <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} isVisible={!isAppFullscreen.value}>

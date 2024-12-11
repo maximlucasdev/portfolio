@@ -149,7 +149,29 @@
 }
 
 .openeditem {
-  box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset, rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
-  background-color: rgb(60, 129, 243);
-  border-radius: 2px;
+  background-image: url("/taskbar/idle.png");
+  background-position: center;
+  margin-bottom: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 164px;
+  height: 35px;
+}
+
+.openeditem:hover {
+  background-image: url("/taskbar/hover.png");
+}
+
+.openeditem:focus {
+  background-image: url("/taskbar/focus.png");
+}
+
+.openeditem-active{
+  background-image: url("/taskbar/focus.png");
+  background-position: center;
+  margin-bottom: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 164px;
+  height: 35px;
 }

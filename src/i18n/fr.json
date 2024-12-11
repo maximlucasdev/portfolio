@@ -14,16 +14,18 @@
     "app.aboutme": "A propos",
     "app.projects": "Projets",
     "app.skills": "Compétences",
-    "app.terminal": "Command prompt",
+    "app.terminal": "Terminal",
+    "app.email": "Contactez moi",
 
     "app.skills.title": "Compétences en programmation",
     "app.github.title": "Profil Github",
     "app.os.customize.title": "Changer le fond d'écran",
     "app.os.about.title": "A propos",
+    "app.email.title": "Envoyez moi un email!",
 
-    "app.aboutme.content.title": "Je suis Maxim.",
+    "app.aboutme.content.title": "Je suis ",
     "app.aboutme.content.subtitle": "Un jeune développeur français passioné.",
-    "app.aboutme.content.desc": "J'ai 17 ans et je suis actuellement au lycée. Je suis passionné par la programmation et je recherche des petits boulots dans ce domaine. J'ai beaucoup d'expérience en programmation et je cherche toujours à en apprendre davantage et à découvrir les nouvelles technologies ! Je pense que pour être un bon développeur, il faut toujours se renseigner sur de nouveaux langages, pratiques et règles de programmation. Je suis une personne très motivée et je cherche toujours à m'améliorer.",
+    "app.aboutme.content.desc": "J'ai 18 ans et je suis actuellement en IUT. Je suis passionné par la programmation et je recherche des petits boulots dans ce domaine. J'ai beaucoup d'expérience en programmation et je cherche toujours à en apprendre davantage et à découvrir les nouvelles technologies ! Je pense que pour être un bon développeur, il faut toujours se renseigner sur de nouveaux langages, pratiques et règles de programmation. Je suis une personne très motivée et je cherche toujours à m'améliorer.",
     "app.aboutme.content.btn": "Mon CV",
     
     "app.aboutwebsite.content.useadvice": "Utilisez ce portfolio comme un système d'exploitation classique.",
@@ -35,6 +37,10 @@
     "app.aboutwebsite.content.p6": "Hébergé avec",
 
     "app.github.content.title": "Vous voulez voir un peu de code?",
+    "app.github.content.subtitle": "Je n'ai pas beaucoup de repos publics, mais c'est là que vous trouverez du travail expérimental (et ce portfolio!).",
+
+    "app.email.content.title": "Vous avez une idée de projet? Une question?",
+    "app.email.content.subtitle": "Envoyez moi un email!",
 
     "app.myprojects.content.title": "Projets",
     "app.myprojects.content.subtitle": "Ici, vous pouvez trouvez les projets sur lesquels j'ai travaillé.",
@@ -55,5 +61,7 @@
     "taskbar.settings.connected": "Connecté",
 
     "actionbuttons.srccode": "Code source",
-    "actionbuttons.reset": "Réinitialiser"
+    "actionbuttons.reset": "Réinitialiser",
+
+    "looksbetteronpc": "Le portfolio a aussi une version PC!"
 }

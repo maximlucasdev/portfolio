@@ -33,9 +33,9 @@ export default function Taskbar() {
   return (
     // @ts-ignore
     <Animated animationIn={"slideInUp"} animationOut={"slideOutDown"} isVisible={visible}>
-        {activeWindow.value === -5 ? (<div ref={languageFloat.refs.setFloating} style={languageFloat.floatingStyles}><TaskbarLanguagePopup/></div>) : null}
-        {activeWindow.value === -4 ? (<div ref={settingsFloat.refs.setFloating} style={settingsFloat.floatingStyles}><TaskbarSettingsPopup/></div>) : null}
-        {activeWindow.value === -3 ? (<div ref={startFloat.refs.setFloating} style={startFloat.floatingStyles}><TaskbarStartMenu/></div>) : null}
+        {activeWindow.value === -5 ? (<div ref={languageFloat.refs.setFloating} style={languageFloat.floatingStyles as React.CSSProperties}><TaskbarLanguagePopup/></div>) : null}
+        {activeWindow.value === -4 ? (<div ref={settingsFloat.refs.setFloating} style={settingsFloat.floatingStyles as React.CSSProperties}><TaskbarSettingsPopup/></div>) : null}
+        {activeWindow.value === -3 ? (<div ref={startFloat.refs.setFloating} style={startFloat.floatingStyles as React.CSSProperties}><TaskbarStartMenu/></div>) : null}
         <div>
             <div class='translate-y-1 flex theme-bg justify-between flex-row items-center w-full h-10 bg-stone-700/30 border-white/10 md:border-[1px] backdrop-blur-sm'>
                 <div class='flex flex-row items-center gap-2 h-full'>
