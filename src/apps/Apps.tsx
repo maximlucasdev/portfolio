@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "preact/compat";
 import t from "../i18n/i18n";
 import LoadingApp from "./LoadingApp";
-const Vscode = lazy(() => import("./vscode/Vscode"));
 const MyProjects = lazy(() => import("./MyProjects/MyProjects"));
 const AboutWebsite = lazy(() => import("./AboutWebsite/About"));
 const Customize = lazy(() => import("./Customize/Customize"));

@@ -27,7 +27,7 @@ export default function ProjectInfo(props:{project:Project,setViewProject: any})
                         </a>
                     : <></>}
                     {props.project.executable ? 
-                        <button class='hover:bg-blue-600 w-full transition bg-blue-500/50 border-2 border-blue-500 rounded-full flex gap-2 items-center px-2 py-1' href={props.project.link} target={"_blank"}
+                        <button class='hover:bg-blue-600 w-full transition bg-blue-500/50 border-2 border-blue-500 rounded-full flex gap-2 items-center px-2 py-1'
                             onClick={() => {openApp(apps.find((app) => app.name == props.project.executable) as App)}}
                         ><span class='text-xl'>✨</span><span class='text-center flex-1'>Run in a new window</span></button>
                     : <></>}
