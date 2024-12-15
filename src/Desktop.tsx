@@ -94,7 +94,7 @@ export default function Desktop() {
         onClick={() => {
           setShowContextMenu(false);
         }}>
-            <div class='bg-blue-500/30 absolute border-[1px] border-blue-500' style={
+            <div class='absolute border-[1px] border-gray-600 border-dotted' style={
               {top: selectionProperties.y < selectionProperties.y1 ? selectionProperties.y : selectionProperties.y1, left:selectionProperties.x < selectionProperties.x1 ? selectionProperties.x : selectionProperties.x1, width: selectionProperties.x < selectionProperties.x1 ? selectionProperties.x1 - selectionProperties.x : selectionProperties.x - selectionProperties.x1, height:selectionProperties.y < selectionProperties.y1 ? selectionProperties.y1 - selectionProperties.y : selectionProperties.y - selectionProperties.y1, visibility: selectionProperties.dragging ? 'visible' : 'hidden'}
             }></div>
             <Suspense fallback={<></>}><AppsWindowsManager/></Suspense>

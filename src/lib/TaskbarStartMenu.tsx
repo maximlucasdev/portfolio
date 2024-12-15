@@ -11,22 +11,31 @@ export default function TaskbarStartMenu() {
   return (
     // @ts-ignore
     <Animated animationIn="slideInUp" animationInDuration={200} visible={true}>
-      <div class='flex flex-col justify-start items-center p-2 rounded-md mb-5 w-80 md:w-96 bg-stone-700/20 border-white/10 md:border-[1px] px-2 md:px-5 backdrop-blur-sm'>
-        <p class='text-white font-light text-lg'>{dmyl}</p>
-        <p class='text-white font-thin'>{new Date().toLocaleTimeString()}</p>
+      <div class='flex flex-col justify-start items-center rounded-t-md w-80 md:w-96 shadow'>
+        <img src="/startmenu/startmenu-top.png" class="w-full"/>
+        <div class="flex w-full border-blue-600 border-r-2 border-l-[1.5px]">
+        <div class="bg-white w-full h-full">
         {apps.map((app) => {
           if (app.name === "Pepsi" && !pepsimode.value) return null;
           if (app.hide) return null;
           return (
-            <button class='flex flex-row items-center justify-start w-full hover:bg-white/10 text-white px-1 py-2 gap-3 transition' onClick={() => openApp(app)}>
-              <img src={app.icon} class='w-7 h-7'/>
+            <button class='flex flex-row items-center justify-start w-full hover:bg-blue-700 hover:text-white text-black p-3 gap-3 transition' onClick={() => openApp(app)}>
+              <img src={app.icon} class='w-8 h-8'/>
               <p>{app.name}</p>
             </button>
           )
         })}
-        <div class='flex flex-row items-center justify-end w-full text-white mt-2 mb-1 border-t-[1px] border-white/10 p-4 gap-3 transition'>
-          <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> {t('actionbuttons.srccode')}</a>
-          <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}><Icon path={mdiRestart} size={1}/> {t('actionbuttons.reset')}</button>
+        <button class="flex items-center gap-2 p-2 justify-center">
+          <img src="/startmenu/allprograms.png" class="h-5"/>
+          <p class="text-black font-bold">All programs</p>
+        </button>
+        </div>
+        <div class="bg-blue-200 w-full border-blue-500 border-l-[1px]">
+
+        </div>
+        </div>
+        <div class='flex flex-row items-center justify-end w-full text-black border-t-[1px] border-blue-800 p-4 gap-3 transition bg-gradient-to-t from-blue-800 to-blue-500'>
+          <button class='flex items-center gap-2 text-white' onClick={() => {window.location.reload(); localStorage.clear()}}><img src="/startmenu/logoff.png" class="w-5 h-5"/> {t('actionbuttons.reset')}</button>
         </div>
       </div>
     </Animated>
