@@ -9,7 +9,7 @@ const t = (key: string) => {
     // @ts-ignore
     if (language.value === 'fr') return fr[key];
     // @ts-ignore
-    return en[key];
+    return en[key] || key;
 }
 
 export default t
