@@ -1,4 +1,3 @@
-declare module 'animate.css-react';
 interface App {
     name: string,
     window: {
@@ -11,7 +10,8 @@ interface App {
         title: string,
         showTitle?: boolean,
         centerScreen?: boolean,
-        transparentTitleBar?: boolean
+        transparentTitleBar?: boolean,
+        fillTitlebar?: boolean
     },
     hide?: boolean,
     disabled?: boolean,
@@ -33,6 +33,7 @@ interface Project {
     descriptionFR: string,
     image: string,
     link?: string,
+    executable?: string,
     skillsName?: string[],
 }
 
