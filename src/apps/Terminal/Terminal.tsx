@@ -3,6 +3,7 @@ import { autocomplete, commands } from './commands';
 import { useState, useId } from "preact/hooks";
 
 import '../../style/index.css';
+import Spinner from './Spinner';
 export default function Terminal() {
     const termId = useId();
     const termInputId = useId();
@@ -19,14 +20,14 @@ export default function Terminal() {
       document.getElementById(termInputId).focus();
     }
     return (
-      <div className="bg-zinc-900 w-full h-full" onClick={() => focusInput()}>
-          <div className='flex flex-col justify-end text-sm' style={{fontFamily:'Terminal'}}>
-            <div className='w-full p-3 text-white overflow-y-scroll noscrollbar max-h-[350px]' id={termId}>
-              <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PortfoliOS 1.0.0 (x64)</span><br/><br/>
+      <div className="w-full h-full md:h-96 rounded-b-md" onClick={() => focusInput()}>
+          <div className='flex flex-col justify-end'>
+            <div className='font-mono w-full h-full md:h-96 p-3 text-white overflow-y-scroll noscrollbar' style={{height: window.innerWidth < 768 ? window.innerHeight-100 : 385}} id={termId}>
+              <p className='text-gray-400 mb-5'><span class='gradient-text'>Welcome to PortfoliOS 1.1.2 (x64)</span><br/><br/>
                 * Website:  https://xshadow.xyz | https://maximlucas.dev<br/>
-                * Support:  hello@xshadow.xyz
+                * Support:  contact@xshadow.xyz
                 </p>
-              <p className='text-gray-500 text-xs'>(i) Type "help" to start! To type commands, click on "help" below. It's the input box!</p>
+              <p className='text-white/50 text-xs'>(i) Type "help" to start! To type commands, click on "help" below. It's the input box!</p>
               {history.map((value) => {
                 const Component = value;
                 return <Component clear={() => {
@@ -55,6 +56,9 @@ export default function Terminal() {
                           setInputData('');
                         }
                         setTimeout(() => document.getElementById(termId).scrollTop = document.getElementById(termId).scrollHeight, 100);
+                        // Umami
+                        // @ts-ignore
+                        umami.track(`Execute terminal command ${inputData}`);
                         break;
                       case 38:
                         if (!inputHistory[historyCursor-1]) break;

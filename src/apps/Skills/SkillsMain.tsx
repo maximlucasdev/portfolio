@@ -9,11 +9,10 @@ export default function SkillsMain() {
     const [visible, setVisible] = useState(true);
     const [selected, setSelected] = useState(t("app.skills.content.languages"));
   return (
-    <div class='h-full w-full bg-white'>
-        <div class='p-10 gap-5 text-center text-black w-full flex flex-col pt-20 items-center justify-center'>
-            {/* @ts-ignore */}
-            <Animated animationIn="fadeInDown"  animationInDuration={1000}>
-                <h1 class='text-4xl font-bold wavy-underline'>{t("app.skills.content.title")}</h1>
+    <div class='h-full w-full md:rounded-b-md'>
+        <div class='p-10 gap-5 text-center text-white w-full flex flex-col pt-20 items-center justify-center'>
+            <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true} animationInDuration={1000}>
+                <h1 class='text-4xl font-bold wavy-underline'>{t("app.skills.content.title")} 🧑‍💻</h1>
             </Animated>
 
             <div class='flex flex-row gap-4 flex-wrap justify-center mb-5 mt-3'>
@@ -23,10 +22,9 @@ export default function SkillsMain() {
                 <SkillTab name={t("app.skills.content.tools")} selected={selected} askills={skills} skills={tools} setSelected={setSelected} setSkills={setSkills} setVisible={setVisible}/>
             </div>
 
-            <div class='flex flex-row gap-4 flex-wrap justify-center text-white'>
+            <div class='flex flex-row gap-4 flex-wrap justify-center'>
                 {skills.map((skill) => {
                     return <div key={skills.indexOf(skill)}>
-                        {/* @ts-ignore */}
                         <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={1000} animationOutDuration={300} animationInDelay={skills.indexOf(skill)*150} animationOutDelay={skills.indexOf(skill)*100} isVisible={visible}>
                             <SkillCard skill={skill} showRating={true}/>
                         </Animated>

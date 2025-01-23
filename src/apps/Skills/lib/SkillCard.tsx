@@ -5,7 +5,7 @@ export default function SkillCard(props:{skill:Skill, showRating:boolean}) {
     const [hover, setHover] = useState(false);
     
   return (
-    <div class='flex bg-slate-800 rounded-md items-center border-transparent' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <div class='flex bg-slate-800/50 rounded-md items-center border-transparent' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <div class='bg-yellow-500 rounded-md p-2'>
             <Icon path={props.skill.mdi} size={1} className='text-black/80'/>
         </div>

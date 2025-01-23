@@ -3,7 +3,6 @@ import { activeWindow, openedWindows } from "../../Signals";
 
 export default function DebuggerWindow() {
     return (
-      // @ts-ignore
       <Rnd
         default={{
           x: window.innerWidth-200,

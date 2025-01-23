@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "preact/compat";
 import t from "../i18n/i18n";
 import LoadingApp from "./LoadingApp";
-const Vscode = lazy(() => import("./vscode/Vscode"));
 const MyProjects = lazy(() => import("./MyProjects/MyProjects"));
 const AboutWebsite = lazy(() => import("./AboutWebsite/About"));
 const Customize = lazy(() => import("./Customize/Customize"));
@@ -10,6 +9,8 @@ const Pepsi = lazy(() => import("./PepsiTheCat/Pepsi"));
 const SkillsMain = lazy(() => import("./Skills/SkillsMain"));
 const Terminal = lazy(() => import("./Terminal/Terminal"));
 const AboutMe = lazy(() => import("./AboutMe/AboutMe"));
+const EmailApp = lazy(() => import("./Email/EmailWindow"));
+const FishSim = lazy(() => import("./fishsim/Fishsim"));
 
 const apps: App[] = [
     {
@@ -30,7 +31,7 @@ const apps: App[] = [
     {
         name: t('app.projects'),
         window: {
-            width: 900,
+            width: 1000,
             height: 600,
             resizable: true,
             maximizable: true,
@@ -59,11 +60,12 @@ const apps: App[] = [
         name: t('app.terminal'),
         window: {
             width: 600,
-            height: 384,
+            height: 420,
             resizable: false,
             maximizable: false,
             minimizable: false,
             fullscreenable: false,
+            fillTitlebar: true,
             title: t('app.terminal')
         },
         icon: '/apps/terminal.png',
@@ -98,18 +100,34 @@ const apps: App[] = [
         component: () => <Suspense fallback={<LoadingApp/>}><Pepsi/></Suspense>
     },
     {
-        name: 'Visual Studio Code',
+        name: t('app.email'),
         window: {
-            width: 1000,
-            height: 800,
+            width: 600,
+            height: 500,
             resizable: true,
             maximizable: true,
             minimizable: true,
             fullscreenable: true,
-            title: 'Visual Studio Code'
+            title: t('app.email.title')
         },
-        icon: '/apps/vscode.svg',
-        component: () => <Suspense fallback={<LoadingApp/>}><Vscode/></Suspense>
+        icon: '/apps/email.png',
+        component: () => <Suspense fallback={<LoadingApp/>}><EmailApp/></Suspense>
+    },
+    {
+        name: 'fishsim',
+        window: {
+            width: 1450,
+            height: 800,
+            resizable: true,
+            maximizable: true,
+            minimizable: false,
+            fillTitlebar: true,
+            fullscreenable: true,
+            title: 'FishSim',
+        },
+        hide: true,
+        icon: '/apps/fishsim.png',
+        component: () => <Suspense fallback={<LoadingApp/>}><FishSim/></Suspense>
     },
 
 

@@ -13,7 +13,7 @@ export default function Pepsi() {
         newpicture();
     }, [])
     return (
-      <button class='flex flex-col justify-center items-center w-full h-full bg-contain bg-center bg-no-repeat bg-zinc-700 rounded-b-md' style={{backgroundImage: `url("${pepsiPicture}")`}} onClick={() => {
+      <button class='flex flex-col justify-center items-center w-full h-full bg-contain bg-center bg-no-repeat rounded-b-md' style={{backgroundImage: `url("${pepsiPicture}")`}} onClick={() => {
         newpicture();
       }}/>
     )
