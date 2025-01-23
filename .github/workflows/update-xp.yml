@@ -21,6 +21,7 @@ jobs:
       - name: Apply changes
         run: |
           cp -r src/apps xp/src/
+          cp -r src/i18n xp/src/
           cp src/data.ts xp/src/
           cp -n -R public/apps xp/public/
           cp -R public/projets xp/public/
