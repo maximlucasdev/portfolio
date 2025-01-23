@@ -17,10 +17,17 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
+        with:
+          path: xp
+          ref: xp
+
       - name: Apply changes
         run: |
-          git checkout xp
-          git checkout main -- src/apps src/data.ts
-          git add src/apps src/data.ts
-          git commit -m "Sync src/apps and src/data.ts with main"
+          cp -r src/apps xp/src/
+          cp src/data.ts xp/src/
+          cd xp
+          git add .
+          git commit -m "Sync data and apps from main branch"
           git push origin xp
