@@ -12,11 +12,6 @@ jobs:
       - name: Checkout the main branch
         uses: actions/checkout@v2
 
-      - name: Git setup
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-
       - name: Checkout tools repo
         uses: actions/checkout@v2
         with:
@@ -28,6 +23,8 @@ jobs:
           cp -r src/apps xp/src/
           cp src/data.ts xp/src/
           cd xp
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
           git add .
           git commit -m "Sync data and apps from main branch"
           git push origin xp
