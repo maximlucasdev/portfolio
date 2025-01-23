@@ -22,6 +22,8 @@ jobs:
         run: |
           cp -r src/apps xp/src/
           cp src/data.ts xp/src/
+          cp -n -R public/apps xp/public/
+          cp -R public/projets xp/public/
           cd xp
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
