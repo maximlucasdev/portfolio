@@ -1,4 +1,4 @@
-import { mdiGithub, mdiRestart } from "@mdi/js";
+import { mdiRestart } from "@mdi/js";
 import { pepsimode } from "../../Signals";
 import t from "../../i18n/i18n";
 import Icon from "@mdi/react";
