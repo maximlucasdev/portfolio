@@ -1,33 +1,28 @@
 {
     "copyright": "All rights reserved.",
-    
     "boot.1": "Booting up...",
     "boot.2": "Loading wallpaper...",
-
     "welcome.title": "Welcome to my portfolio!",
     "welcome.desc1": "Navigate through this portfolio like you would on an classic operating system.",
     "welcome.desc2": "Right click, open the start menu, click on desktop icons... Navigate as you wish!",
     "welcome.desc3": "I did this portfolio all by myself, from scratch. I wanted to make something different from the usual portfolio, and I think I did it!",
     "welcome.desc4": "You can learn more by right clicking on the desktop and clicking on \"About\".",
     "welcome.btn": "Don't show this again",
-
     "app.aboutme": "About me",
     "app.projects": "Projects",
     "app.skills": "Skills",
     "app.terminal": "Terminal",
     "app.email": "Contact me",
-
     "app.skills.title": "Coding skills",
     "app.github.title": "Github profile",
     "app.os.customize.title": "Change wallpaper",
     "app.os.about.title": "About",
     "app.email.title": "Send me an email!",
-
     "app.aboutme.content.title": "I'm ",
     "app.aboutme.content.subtitle": "A french developer.",
     "app.aboutme.content.desc": "I'm 18 years old and I'm currently in college. I'm passionate about programming and I'm looking for small jobs in this field. I have a lot of experience in programming and I'm always looking to learn more & learn about new technologies! I believe that to be a good developer, you always have to learn about new programming languages, practices and rutimes. I'm a very motivated person and I'm always looking to improve myself.",
-    "app.aboutme.content.btn": "My resume",
-    
+    "app.aboutme.content.btn": "My skills",
+    "app.aboutme.content.btn2": "My projects",
     "app.aboutwebsite.content.useadvice": "Use this portfolio like you would use a real operating system.",
     "app.aboutwebsite.content.p1": "It was built on top of",
     "app.aboutwebsite.content.p2": "and",
@@ -35,33 +30,26 @@
     "app.aboutwebsite.content.p4": "for styling.",
     "app.aboutwebsite.content.p5": "The icons are from",
     "app.aboutwebsite.content.p6": "This is hosted on",
-
     "app.github.content.title": "Looking to see some of my work?",
     "app.github.content.subtitle": "I don't have that much public repositories, but it's where you will find experimental work (and this portfolio!).",
-
     "app.email.content.title": "Do you have a project in mind? A question?",
     "app.email.content.subtitle": "Send me an email!",
-
     "app.myprojects.content.title": "Projects",
     "app.myprojects.content.subtitle": "Here you can find stuff that I've worked on.",
     "app.myprojects.content.learnmore": "Learn more",
     "app.myprojects.content.goback": "Go back",
     "app.myprojects.content.open": "Open",
-
     "app.skills.content.title": "Coding skills",
     "app.skills.content.languages": "Languages",
     "app.skills.content.databases": "Databases",
     "app.skills.content.frameworks": "Frameworks / Libraries",
     "app.skills.content.tools": "Tools",
-
     "contextmenu.customize": "Customize",
     "contextmenu.about": "About",
-
     "taskbar.settings.left": "left",
     "taskbar.settings.connected": "Connected",
-
     "actionbuttons.srccode": "Source code",
     "actionbuttons.reset": "Reset",
-
-    "looksbetteronpc": "The portfolio also has a PC version!"
+    "looksbetteronpc": "The portfolio also has a PC version!",
+    "mobile.longClickWallpaperChange": "Long click the wallpaper to change it!"
 }
