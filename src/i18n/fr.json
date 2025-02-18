@@ -12,6 +12,7 @@
     "app.projects": "Projets",
     "app.skills": "Compétences",
     "app.terminal": "Terminal",
+    "app.terminal.firsthint": "Cliquez sur le carré clignotant et écrivez 'help' pour voir la liste des commandes disponible.",
     "app.email": "Contactez moi",
     "app.skills.title": "Compétences en programmation",
     "app.github.title": "Profil Github",

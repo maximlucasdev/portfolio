@@ -14,7 +14,7 @@ import {
   mdiDatabase,
   mdiMicrosoftVisualStudio,
   mdiMicrosoftVisualStudioCode,
-  mdiGithub,
+  mdiGit,
   mdiDocker,
   mdiTailwind,
   mdiWeb,
@@ -24,7 +24,9 @@ import {
   mdiAbacus,
   mdiFile,
   mdiGamepad,
-  mdiLock
+  mdiLock,
+  mdiGithub,
+  mdiGitlab
 } from '@mdi/js';
 
 const languages: Skill[] = [
@@ -69,7 +71,10 @@ const db: Skill[] = [
 const tools: Skill[] = [
   { name: "Visual Studio", mdi: mdiMicrosoftVisualStudio },
   { name: "Visual Studio Code", mdi: mdiMicrosoftVisualStudioCode },
-  { name: "GitHub", mdi: mdiGithub },
+  { name: "Git", mdi: mdiGit },
+  { name: "Github actions", mdi: mdiGithub },
+  { name: "Github", mdi: mdiGithub },
+  { name: "Gitlab", mdi: mdiGitlab },
   { name: "Docker", mdi: mdiDocker },
   { name: "Pterodactyl", mdi: mdiGamepad },
   { name: "MinIO Object Store", mdi: mdiFile },

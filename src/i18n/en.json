@@ -12,6 +12,7 @@
     "app.projects": "Projects",
     "app.skills": "Skills",
     "app.terminal": "Terminal",
+    "app.terminal.firsthint": "Click on the blinking dot and type 'help' to start!",
     "app.email": "Contact me",
     "app.skills.title": "Coding skills",
     "app.github.title": "Github profile",
