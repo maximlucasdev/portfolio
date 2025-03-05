@@ -26,13 +26,15 @@ import {
   mdiGamepad,
   mdiLock,
   mdiGithub,
-  mdiGitlab
+  mdiGitlab,
+  mdiLanguageKotlin
 } from '@mdi/js';
 
 const languages: Skill[] = [
   { name: "Go", mdi: mdiLanguageGo, stars: 5 },
   { name: "JavaScript", mdi: mdiLanguageJavascript, stars: 5 },
   { name: "TypeScript", mdi: mdiLanguageTypescript, stars: 5 },
+  { name: "Kotlin", mdi: mdiLanguageKotlin, stars: 4 },
   { name: "Python", mdi: mdiLanguagePython, stars: 4 },
   { name: "VB.net 👴", mdi: mdiDotNet, stars: 4 },
   { name: "HTML & CSS", mdi: mdiLanguageHtml5, stars: 3 },
