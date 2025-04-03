@@ -23,7 +23,7 @@ export default function TaskbarSettingsPopup() {
         </div>
         <div class='flex flex-row items-center gap-2 p-3 text-white text-sm'>
           <Icon path={mdiWifi} horizontal size={0.8}/>
-          <p>PepsiNet <span class='text-xs font-thin text-gray-400'>5Ghz</span></p>
+          <p>Wi-fi <span class='text-xs font-thin text-gray-400'>5Ghz</span></p>
         </div>
       </div>
     </Animated>

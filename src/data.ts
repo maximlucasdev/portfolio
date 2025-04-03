@@ -27,7 +27,10 @@ import {
   mdiLock,
   mdiGithub,
   mdiGitlab,
-  mdiLanguageKotlin
+  mdiLanguageKotlin,
+  mdiUbuntu,
+  mdiDebian,
+  mdiFedora
 } from '@mdi/js';
 
 const languages: Skill[] = [
@@ -82,6 +85,13 @@ const tools: Skill[] = [
   { name: "MinIO Object Store", mdi: mdiFile },
   { name: "Caddy", mdi: mdiLock },
   { name: "Nginx", mdi: mdiWeb }
+]
+
+const administration: Skill[] = [
+  { name: "Ubuntu server administration/installation", mdi: mdiUbuntu },
+  { name: "Debian server administration/installation", mdi: mdiDebian },
+  { name: "Fedora client/server administration/installation", mdi: mdiFedora },
+  { name: "Docker compose deployments", mdi: mdiDocker },
 ]
 
 const projects: Project[] = [
@@ -213,4 +223,4 @@ const projects: Project[] = [
   },
 ];
 
-export { languages, frameworks, db, tools, projects }
+export { languages, frameworks, db, tools, projects, administration }
