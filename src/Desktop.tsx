@@ -203,7 +203,7 @@ export default function Desktop() {
           >
             © {new Date().getFullYear()}{" "}
             <a
-              href="https://github.com/shadowdevfr"
+              href="https://github.com/maximlucasdev"
               class="hover:opacity-50 transition"
               target="_blank"
             >

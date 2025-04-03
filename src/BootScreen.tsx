@@ -11,7 +11,7 @@ export default function BootScreen(props:{status:number}) {
           <p class='text-white/50 font-thin'>{props.status === 2 ? t('boot.2') : t('boot.1')}</p>
           {props.status === 2 ? <button class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' onClick={() => {window.location.reload(); localStorage.clear()}}>{t('actionbuttons.reset')}</button> : <></>}
         </div>
-        <p class='text-md text-center w-full text-gray-500 mb-5'>Copyright © {new Date().getFullYear()} <a href='https://github.com/shadowdevfr' target='_blank'>Maxim Lucas</a> {t('copyright')}</p>
+        <p class='text-md text-center w-full text-gray-500 mb-5'>Copyright © {new Date().getFullYear()} <a href='https://github.com/maximlucasdev' target='_blank'>Maxim Lucas</a> {t('copyright')}</p>
     </div>
   )
 }

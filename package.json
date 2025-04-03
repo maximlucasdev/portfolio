@@ -32,7 +32,7 @@
   "description": "<p float=\"left\" align=\"center\">\r   <img src=\"https://i.imgur.com/U9lFsUG.jpeg\" width=15% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.imgur.com/b1a39cz.png\" width=40% />\r   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"https://i.ibb.co/n0C9kvJ/o.png\" width=15% height=10%/>\r </p>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shadowdevfr/shadowdevfr.git"
+    "url": "git+https://github.com/maximlucasdev/maximlucasdev.git"
   },
   "keywords": [
     "portfolio"
@@ -40,7 +40,7 @@
   "author": "Maxim Lucas",
   "license": "LGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/shadowdevfr/shadowdevfr/issues"
+    "url": "https://github.com/maximlucasdev/maximlucasdev/issues"
   },
-  "homepage": "https://github.com/shadowdevfr/shadowdevfr#readme"
+  "homepage": "https://github.com/maximlucasdev/maximlucasdev#readme"
 }
