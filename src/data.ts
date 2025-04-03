@@ -137,7 +137,7 @@ const projects: Project[] = [
     descriptionFR:
       "FishSim est un simulateur de poisson, simulant leur vie, mais aussi la mort, la reproduction, la nourriture etc... Ce projet réalisant des mutations génétiques aléatoires, il nous permet de voir la séléction naturelle (les poissons qui vont le plus vite mangeront plus, donc surviveront plus, donc se reproduiront le plus etc...)",
     image: "/projets/fishsim.webp",
-    link: "https://github.com/shadowdevfr/fishsim",
+    link: "https://github.com/maximlucasdev/fishsim",
     skillsName: ["Go", "EbitenEngine"]
   },
   {
@@ -162,7 +162,7 @@ const projects: Project[] = [
     descriptionFR:
       "Projet privé réalisé fin 2023, mis publique pour partager. Créé en utilisant Preact et Vite, ce résolveur de Sudoku accèpte n'importe quel problème sous forme de matrice et le résout en utilisant le BackTracking récursif. Pour l'essayer, utilisez le lien ci-dessus à côté du titre du projet.",
     image: "/projets/sudoku.webp",
-    link: "https://github.com/shadowdevfr/sudokusolver",
+    link: "https://github.com/maximlucasdev/sudokusolver",
     skillsName: ["Preact", "TypeScript", "Vite"]
   },
   {

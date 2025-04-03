@@ -2,7 +2,7 @@ import { mdiRestart } from "@mdi/js";
 import { pepsimode } from "../../Signals";
 import t from "../../i18n/i18n";
 import Icon from "@mdi/react";
-//           <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/shadowdevfr/shadowdevfr' target="_blank"><Icon path={mdiGithub} size={1}/> {t('actionbuttons.srccode')}</a>
+//           <a class='hover:bg-white hover:text-black/80 transition bg-white/20 rounded-full flex gap-2 items-center px-2 py-1' href='https://github.com/maximlucasdev/maximlucasdev' target="_blank"><Icon path={mdiGithub} size={1}/> {t('actionbuttons.srccode')}</a>
 
 export default function AboutWebsite() {
   return (
@@ -73,7 +73,7 @@ export default function AboutWebsite() {
         <div class="h-full" />
         <p class="text-sm text-center w-full text-gray-500">
           Copyright © {new Date().getFullYear()}{" "}
-          <a href="https://github.com/shadowdevfr" target="_blank">
+          <a href="https://github.com/maximlucasdev" target="_blank">
             Maxim Lucas
           </a>{" "}
           {t("copyright")}
