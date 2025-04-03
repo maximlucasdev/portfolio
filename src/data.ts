@@ -96,6 +96,18 @@ const administration: Skill[] = [
 
 const projects: Project[] = [
   {
+    title: "Shadow's Dash (2023-...)",
+    subtitleEN: "Full Stack web fully featured modern client panel for Pterodactyl-based hosts",
+    subtitleFR: "Panel de gestion client vendu en SaaS complet et moderne pour les entreprises d'hébergement.",
+    descriptionEN:
+      "A fully featured client panel for Pterodactyl-based hosting services. Comes with two integrated modes: Resource split and Per Server Plans. Comes with a fully integrated payment system, invoicing system, referral system, and more. You can view a live demo of the client panel by clicking on the link below. The client panel is available for purchase, if you are interested, you can order it at https://dash.xshadow.xyz ! Used by multiple well-known hosts around the world.",
+    descriptionFR:
+      "Un panel client complet pour les services d'hébergement, vendu en SaaS. Livré avec deux modes intégrés: Partage des resources et Abonnement Par Serveur. Livré avec un système de paiement entièrement intégré, un système de facturation, un système de parrainage, et plus encore. Vous pouvez voir une démo en direct du panneau client en cliquant sur le lien ci-dessous. Le panneau client est disponible à l'achat, si vous êtes intéressés, rdv sur https://dash.xshadow.xyz ! Utilisé par de nombreux hébergeurs à travers le monde.",
+    image: "/projets/shadowsdash.webp",
+    link: "https://shadowsdash.com",
+    skillsName: ["Svelte", "Elysia", "TypeScript", "BunJS", "TailwindCSS", "MongoDB", "Vite"]
+  },
+  {
     title: "Naopark (2024-...)",
     descriptionEN: "An application to get the list of parking lots and the number of available spaces in real-time in Nantes. I created this application because it is not easy to find parking lots and their information in Nantes. (Available in France only)",
     descriptionFR: "Une application pour obtenir la liste des parkings ainsi que le nombre de place disponibles en direct à Nantes. J'ai réalisé cette application car on ne peut pas facilement trouver les parkings et leurs infos à Nantes.",
@@ -140,18 +152,6 @@ const projects: Project[] = [
     link: "https://tube.xshadow.xyz",
     skillsName: ["Go", "Preact", "TailwindCSS", "Vite"]
 
-  },
-  {
-    title: "Shadow's Dash (2023-...)",
-    subtitleEN: "Full Stack web fully featured modern client panel for Pterodactyl-based hosts",
-    subtitleFR: "Appli web full stack, panel client complet et moderne pour les hébergeurs basés sur Pterodactyl",
-    descriptionEN:
-      "A fully featured client panel for Pterodactyl-based hosting services. Comes with two integrated modes: Resource split and Per Server Plans. Comes with a fully integrated payment system, invoicing system, referral system, and more. You can view a live demo of the client panel by clicking on the link below. The client panel is available for purchase, if you are interested, you can order it at https://dash.xshadow.xyz ! Used by multiple well-known hosts around the world.",
-    descriptionFR:
-      "Un panel client complet pour les services d'hébergement basés sur Pterodactyl. Livré avec deux modes intégrés: Partage des resources et Abonnement Par Serveur. Livré avec un système de paiement entièrement intégré, un système de facturation, un système de parrainage, et plus encore. Vous pouvez voir une démo en direct du panneau client en cliquant sur le lien ci-dessous. Le panneau client est disponible à l'achat, si vous êtes intéressés, rdv sur https://dash.xshadow.xyz ! Utilisé par de nombreux hébergeurs à travers le monde.",
-    image: "/projets/shadowsdash.webp",
-    link: "https://dash.xshadow.xyz",
-    skillsName: ["Svelte", "Elysia", "TypeScript", "BunJS", "TailwindCSS", "MongoDB", "Vite"]
   },
   {
     title: "SudokuSolver (2023)",
