@@ -1,5 +1,5 @@
 import { Animated } from "react-animated-css";
-import { languages, frameworks, db, tools } from "../../data";
+import { languages, frameworks, db, tools, administration } from "../../data";
 import SkillCard from "./lib/SkillCard";
 import { useState } from "preact/hooks";
 import SkillTab from "./lib/SkillTab";
@@ -20,6 +20,7 @@ export default function SkillsMain() {
                 <SkillTab name={t("app.skills.content.databases")} selected={selected} askills={skills} skills={db} setSelected={setSelected} setSkills={setSkills} setVisible={setVisible}/>
                 <SkillTab name={t("app.skills.content.frameworks")} selected={selected} askills={skills} skills={frameworks} setSelected={setSelected} setSkills={setSkills} setVisible={setVisible}/>
                 <SkillTab name={t("app.skills.content.tools")} selected={selected} askills={skills} skills={tools} setSelected={setSelected} setSkills={setSkills} setVisible={setVisible}/>
+                <SkillTab name='Administration' selected={selected} askills={skills} skills={administration} setSelected={setSelected} setSkills={setSkills} setVisible={setVisible}/>
             </div>
 
             <div class='flex flex-row gap-4 flex-wrap justify-center'>
